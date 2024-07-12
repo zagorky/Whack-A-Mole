@@ -1,0 +1,119 @@
+/* переменные  */
+:root {
+  --color-light-xl: #ffffff;
+  --color-light-l: #f6f6f6;
+  --color-light-s: #fafafa;
+  --color-dark-s: #cdcdcd;
+  --color-dark-m: #b2b2b2;
+  --color-dark-l: #545454;
+  --color-dark-xl: #4c4c4c;
+  --color-dark-2xl: #444444;
+  --color-dark-3xl: #292929;
+  --color-primary: #f1cdb3;
+  --color-primary-light: #fddcc4;
+}
+/* стили */
+body {
+  max-width: 1280px;
+  width: 100%;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+/* header */
+.container-fb {
+  min-height: 908px;
+  background-image: url("");
+}
+header {
+  min-height: 60px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+a {
+  text-decoration: none;
+}
+h1 {
+  color: var(--color-primary);
+}
+header h6 {
+  color: var(--color-light-xl);
+}
+
+header li {
+  list-style: none;
+}
+
+/* not-only */
+.container-not-only {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.container-not-only h2 {
+  color: var(--color-light-xl);
+}
+
+.container-not-only p {
+  color: var(--color-dark-s);
+}
+.container-not-only button {
+  color: var(--color-dark-xl);
+  background-color: var(--color-primary);
+}
+/* about */
+.container-about {
+  min-height: 588px;
+  background-color: var(--color-light-xl);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.container-about h3 {
+  color: var(--color-dark-l);
+}
+
+.container-about p {
+  color: var(--color-dark-xl);
+}
+
+/* our friends */
+.container-our-friends {
+  min-height: 877px;
+  background-color: var(--color-light-l);
+}
+.container-our-friends h3 {
+  color: var(--color-dark-l);
+}
+.container-our-friends button {
+  color: var(--color-dark-l);
+  border: 2px solid #f1cdb3;
+  border-radius: 100px;
+}
+.container-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.card {
+  background-color: var(--color-light-s);
+}
+
+/* help */
+.container-help {
+  min-height: 611px;
+  background-color: var(--color-light-xl);
+}
+
+/* addition */
+.container-in-addition {
+  min-height: 462px;
+  background-color: var(--color-light-l);
+  display: grid;
+  grid-template-columns: repeat(2, 1 fr);
+}
+
+/* footer */
+footer {
+  min-height: 350px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* pets */
