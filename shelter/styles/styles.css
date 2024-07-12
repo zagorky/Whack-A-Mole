@@ -18,20 +18,34 @@ body {
   width: 100%;
   font-family: Georgia, "Times New Roman", Times, serif;
 }
+a,
+a:active,
+a:hover {
+  text-decoration: none;
+}
+button,
+button:active,
+button:hover {
+  text-decoration: none;
+}
+li {
+  text-decoration: none;
+}
 
 /* header */
 .container-fb {
   min-height: 908px;
-  background-image: url("");
+  background-image: url("/shelter/img/start-screen-gradient-background.jpg");
 }
 header {
   min-height: 60px;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
 }
-a {
-  text-decoration: none;
+.container-logo h6 {
+  color: var(--color-light-xl);
 }
+
 h1 {
   color: var(--color-primary);
 }
@@ -44,34 +58,60 @@ header li {
 }
 
 /* not-only */
+
 .container-not-only {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
+.cont-not-only-content {
+  max-width: 1200px;
+  height: auto;
+  margin: 180px 40px;
+}
 .container-not-only h2 {
   color: var(--color-light-xl);
+  font-size: 44px;
+  font-weight: 400;
+  line-height: 57.2px;
 }
 
 .container-not-only p {
   color: var(--color-dark-s);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
 }
 .container-not-only button {
   color: var(--color-dark-xl);
   background-color: var(--color-primary);
+  padding: 15px 45px;
+  border-radius: 100px;
 }
 /* about */
 .container-about {
-  min-height: 588px;
   background-color: var(--color-light-xl);
+}
+.cont-about-content {
+  max-width: 1200px;
+  min-height: 408px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  margin: 80px 40px;
+  padding: 0 175px;
 }
 .container-about h3 {
   color: var(--color-dark-l);
+  font-size: 35px;
+  font-weight: 400;
 }
 
 .container-about p {
   color: var(--color-dark-xl);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
 }
 
 /* our friends */
@@ -81,15 +121,28 @@ header li {
 }
 .container-our-friends h3 {
   color: var(--color-dark-l);
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 45.5px;
+  letter-spacing: 6%;
+  text-align: center;
 }
 .container-our-friends button {
-  color: var(--color-dark-l);
   border: 2px solid #f1cdb3;
   border-radius: 100px;
+  padding: 15px 45px;
+  width: 187px;
+  height: 52px;
 }
 .container-cards {
   display: grid;
+  color: var(--color-dark-l);
   grid-template-columns: repeat(3, 1fr);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 22.72px;
+  letter-spacing: 6%;
+  text-align: center;
 }
 .card {
   background-color: var(--color-light-s);
@@ -105,8 +158,37 @@ header li {
 .container-in-addition {
   min-height: 462px;
   background-color: var(--color-light-l);
+}
+.cont-in-add-content {
   display: grid;
-  grid-template-columns: repeat(2, 1 fr);
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.container-in-addition h3 {
+  color: var(--color-dark-l);
+  font-size: 35px;
+  font-weight: 400;
+}
+.container-in-addition h4 {
+  color: var(--color-dark-l);
+  font-size: 20px;
+  font-weight: 400;
+  background-color: var(--color-primary);
+  border-radius: 9px;
+  padding: 10px 15px 10px 15px;
+  width: 349px;
+  height: 43px;
+}
+.container-in-addition h5 {
+  color: var(--color-dark-l);
+  font-size: 15px;
+  font-weight: 400;
+}
+.container-in-addition p {
+  color: var(--color-dark-m);
+  font-size: 12px;
+  font-weight: 400;
+  font-style: italic;
 }
 
 /* footer */
@@ -114,6 +196,13 @@ footer {
   min-height: 350px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  background-image: url("/shelter/img/footer-gradient-background.png");
+}
+footer h3 {
+  color: var(--color-light-xl);
+}
+footer h4 {
+  color: var(--color-primary);
 }
 
 /* pets */
