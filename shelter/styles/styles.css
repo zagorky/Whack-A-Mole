@@ -126,7 +126,7 @@ ul {
   line-height: 24px;
   padding-top: 5px;
 }
-.container-not-only button {
+.button-pets {
   background-color: var(--color-primary);
   padding: 15px 45px;
   border-radius: 100px;
@@ -136,7 +136,7 @@ ul {
   line-height: 22.1px;
   margin-top: 30px;
 }
-.container-not-only button :nth-child(1) {
+.button-pets :nth-child(1) {
   width: 117px;
   height: 22px;
   letter-spacing: 1px;
@@ -199,7 +199,7 @@ ul {
   text-align: center;
   letter-spacing: 3.3px;
 }
-.container-our-friends button {
+.button-pets2 {
   border: 2px solid #f1cdb3;
   border-radius: 100px;
   padding: 0;
@@ -209,7 +209,7 @@ ul {
   cursor: pointer;
   margin: 0px 465px;
 }
-.container-our-friends button a {
+.button-pets2 a {
   color: var(--color-dark-xl);
   font-family: var(--font-size-h1);
   font-weight: var(--font-weight);
@@ -404,7 +404,6 @@ footer {
   padding: 40px 40px 0px 40px;
   display: grid;
   gap: 160px;
-  align-items: center;
   grid-template-columns: repeat(3, 1fr);
 }
 
@@ -413,14 +412,32 @@ footer {
   font-size: var(--font-size-h3);
   line-height: 45.5px;
   color: var(--color-light-xl);
-  margin: 0;
+  margin: 16px 0 40px 0;
+  letter-spacing: 3.6px;
 }
+.contacts {
+  width: 278px;
+  height: 234px;
+}
+
+.adresses {
+  width: 302px;
+  height: 234px;
+}
+/* .footer-cont h4 img {
+  padding-right: 20px;
+} */
 .footer-cont h4 {
   font-size: var(--font-size-h4);
   font-weight: var(--font-weight);
   line-height: 23px;
   color: var(--color-primary);
-  margin: 0;
+  margin: 0 0 40px 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 20px;
+  letter-spacing: 1.8px;
 }
 
 /* pets */
