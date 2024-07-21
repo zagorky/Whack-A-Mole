@@ -53,7 +53,7 @@ li {
 
 /* header */
 .container-fb {
-  background-image: url("/shelter/img/start-screen-gradient-background.jpg");
+  background-image: url("../img/start-screen-gradient-background.jpg");
 }
 header {
   width: 1200px;
@@ -363,6 +363,10 @@ ul {
   display: flex;
   letter-spacing: 1.3px;
 }
+.card-number h4 a {
+  color: var(--color-dark-l);
+}
+
 .cont-in-add-content-text h5 {
   color: var(--color-dark-l);
   font-size: var(--font-size-h5);
@@ -388,7 +392,7 @@ ul {
 
 /* footer */
 footer {
-  background-image: url("/shelter/img/footer-gradient-background.png");
+  background-image: url("../img/footer-gradient-background.png");
 }
 .contacts {
   display: grid;
