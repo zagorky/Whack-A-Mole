@@ -127,16 +127,23 @@ ul {
   padding-top: 5px;
 }
 .container-not-only button {
-  color: var(--color-dark-xl);
   background-color: var(--color-primary);
   padding: 15px 45px;
   border-radius: 100px;
   gap: 10px;
-  width: 207px;
-  height: 52px;
-  font-size: var(--font-size-p-ul);
+  width: 211px;
+  height: 56px;
   line-height: 22.1px;
-  margin-top: 26px;
+  margin-top: 30px;
+}
+.container-not-only button :nth-child(1) {
+  width: 117px;
+  height: 22px;
+  letter-spacing: 1px;
+  font-size: 17px;
+  font-family: var(--font-family-h1);
+  color: var(--color-dark-xl);
+  font-weight: var(--font-weight);
 }
 
 /* about */
@@ -148,23 +155,25 @@ ul {
   max-width: 1200px;
   display: grid;
   grid-template-columns: 500px 550px;
-  gap: 100px;
+  gap: 95px;
 }
 .cont-about-content img {
-  padding: 0 165px 0 175px;
+  padding: 0 175px 0 175px;
 }
 .cont-about-text {
   width: 430px;
   height: 380px;
+  margin: 14px 0;
 }
 .container-about h3 {
   color: var(--color-dark-l);
   font-size: var(--font-size-h3);
   font-weight: var(--font-weight);
-  line-height: 50px;
-  margin: 10px 0;
-  letter-spacing: var(--letter-spacing);
-  word-spacing: var(--word-spacing);
+  width: 370px;
+  height: 90px;
+  margin: 0;
+  line-height: 45px;
+  letter-spacing: 3px;
 }
 
 .container-about p {
@@ -173,7 +182,7 @@ ul {
   font-size: var(--font-size-p-ul);
   font-weight: var(--font-weight);
   line-height: 24px;
-  margin: 20px 0px;
+  margin: 25px 0px;
 }
 
 /* our friends */
