@@ -82,12 +82,12 @@ header {
   margin: 0;
   letter-spacing: 1.4px;
 }
-nav {
+header nav {
   display: grid;
   justify-content: end;
 }
 
-ul {
+header ul {
   font-family: var(--font-family-h6-p-ul);
   font-size: var(--font-size-p-ul);
   font-weight: var(--font-weight);
@@ -98,6 +98,13 @@ ul {
   gap: 35px;
 }
 
+header li a {
+  color: var(--color-dark-s);
+}
+header li a:hover {
+  color: var(--color-light-s);
+  text-decoration: underline 2px #f1cdb3;
+}
 /* not-only */
 
 .container-not-only {
@@ -258,6 +265,7 @@ ul {
   letter-spacing: 1px;
   font-weight: var(--font-weight);
   margin: 0px auto;
+  cursor: pointer;
 }
 .card {
   background-color: var(--color-light-s);
@@ -429,3 +437,55 @@ footer {
 }
 
 /* pets */
+
+/* header */
+.header-pets-page a {
+  color: var(--color-dark-l);
+}
+.header-pets-page h6 {
+  color: var(--color-dark-xxl);
+}
+.header-pets-page li:hover {
+  color: var(--color-dark-xxl);
+  text-decoration: underline 2px #f1cdb3;
+}
+
+/* pets */
+
+.container-cards-pets-page {
+  width: 1200px;
+  display: grid;
+  color: var(--color-dark-l);
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 465px 465px;
+  font-weight: var(--font-weight);
+  font-size: 20px;
+  line-height: 22.72px;
+  border-radius: 9px;
+  text-align: center;
+  margin: 60px 0px 60px 0px;
+}
+.container-cards-pets-page button {
+  border: 2px solid #f1cdb3;
+  border-radius: 100px;
+  padding: 15px 45px;
+  width: 187px;
+  height: 52px;
+  font-size: 17px;
+  font-family: var(--font-size-h1);
+  background-color: var(--color-light-s);
+  letter-spacing: 1px;
+  font-weight: var(--font-weight);
+  margin: 0px auto;
+  cursor: pointer;
+}
+.card {
+  background-color: var(--color-light-s);
+  width: 270px;
+  height: 435px;
+}
+.card p {
+  font-family: var(--font-family-h5);
+  letter-spacing: 1.3px;
+  margin: 25px auto 30px auto;
+}
