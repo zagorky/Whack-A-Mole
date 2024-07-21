@@ -221,6 +221,7 @@ ul {
 .container-help {
   background-color: var(--color-light-xl);
   padding: 80px 40px;
+  height: 611px;
   text-align: center;
 }
 
@@ -239,28 +240,25 @@ ul {
 }
 .container-help-items {
   margin: 60px 87px 0px 87px;
-  max-width: 1200px;
   color: var(--color-dark-l);
   max-width: 1026px;
-}
-.container-help-items :nth-child(1) {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  justify-content: space-evenly;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 55px;
 }
-.container-help-items :nth-child(1) div {
-  display: block;
-  align-self: center;
-}
-.container-help-items :nth-child(2) {
+.cont-help-line1 {
   display: grid;
-  text-align: center;
-  align-items: center;
-  grid-template-columns: repeat(4, 1fr);
+  height: 113px;
+  margin: 0;
+  grid-template-columns: 82px 150px 60px 153px 101px;
+  gap: 120px;
 }
-.container-help-items :nth-child(2) div {
-  display: block;
-  align-self: center;
+.cont-help-line2 {
+  height: 113px;
+  display: grid;
+  gap: 120px;
+  grid-template-columns: 84px 101px 165px 143px;
+  padding: 0 84px;
 }
 
 /* addition */
