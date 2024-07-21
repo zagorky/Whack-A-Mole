@@ -82,12 +82,12 @@ header {
   margin: 0;
   letter-spacing: 1.4px;
 }
-nav {
+header nav {
   display: grid;
   justify-content: end;
 }
 
-ul {
+header ul {
   font-family: var(--font-family-h6-p-ul);
   font-size: var(--font-size-p-ul);
   font-weight: var(--font-weight);
@@ -98,6 +98,13 @@ ul {
   gap: 35px;
 }
 
+header li a {
+  color: var(--color-dark-s);
+}
+header li a:hover {
+  color: var(--color-light-s);
+  text-decoration: underline 2px #f1cdb3;
+}
 /* not-only */
 
 .container-not-only {
@@ -128,15 +135,16 @@ ul {
 }
 .button-pets {
   background-color: var(--color-primary);
-  padding: 15px 45px;
   border-radius: 100px;
-  gap: 10px;
   width: 211px;
   height: 56px;
   line-height: 22.1px;
   margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.button-pets :nth-child(1) {
+.button-pets a {
   width: 117px;
   height: 22px;
   letter-spacing: 1px;
@@ -208,13 +216,16 @@ ul {
   background-color: var(--color-primary);
   cursor: pointer;
   margin: 0px 465px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .button-pets2 a {
   color: var(--color-dark-xl);
   font-family: var(--font-size-h1);
   font-weight: var(--font-weight);
   font-size: 17px;
-  letter-spacing: 1.1px;
+  letter-spacing: 1.2px;
   width: 171px;
   height: 22px;
 }
@@ -254,6 +265,7 @@ ul {
   letter-spacing: 1px;
   font-weight: var(--font-weight);
   margin: 0px auto;
+  cursor: pointer;
 }
 .card {
   background-color: var(--color-light-s);
@@ -394,12 +406,7 @@ ul {
 footer {
   background-image: url("../img/footer-gradient-background.png");
 }
-.contacts {
-  display: grid;
-  grid-template-rows: auto;
-  gap: 40px;
-  height: 234px;
-}
+
 .footer-cont {
   padding: 40px 40px 0px 40px;
   display: grid;
@@ -415,18 +422,7 @@ footer {
   margin: 16px 0 40px 0;
   letter-spacing: 3.6px;
 }
-.contacts {
-  width: 278px;
-  height: 234px;
-}
 
-.adresses {
-  width: 302px;
-  height: 234px;
-}
-/* .footer-cont h4 img {
-  padding-right: 20px;
-} */
 .footer-cont h4 {
   font-size: var(--font-size-h4);
   font-weight: var(--font-weight);
@@ -441,3 +437,55 @@ footer {
 }
 
 /* pets */
+
+/* header */
+.header-pets-page a {
+  color: var(--color-dark-l);
+}
+.header-pets-page h6 {
+  color: var(--color-dark-xxl);
+}
+.header-pets-page li:hover {
+  color: var(--color-dark-xxl);
+  text-decoration: underline 2px #f1cdb3;
+}
+
+/* pets */
+
+.container-cards-pets-page {
+  width: 1200px;
+  display: grid;
+  color: var(--color-dark-l);
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 465px 465px;
+  font-weight: var(--font-weight);
+  font-size: 20px;
+  line-height: 22.72px;
+  border-radius: 9px;
+  text-align: center;
+  margin: 60px 0px 60px 0px;
+}
+.container-cards-pets-page button {
+  border: 2px solid #f1cdb3;
+  border-radius: 100px;
+  padding: 15px 45px;
+  width: 187px;
+  height: 52px;
+  font-size: 17px;
+  font-family: var(--font-size-h1);
+  background-color: var(--color-light-s);
+  letter-spacing: 1px;
+  font-weight: var(--font-weight);
+  margin: 0px auto;
+  cursor: pointer;
+}
+.card {
+  background-color: var(--color-light-s);
+  width: 270px;
+  height: 435px;
+}
+.card p {
+  font-family: var(--font-family-h5);
+  letter-spacing: 1.3px;
+  margin: 25px auto 30px auto;
+}
