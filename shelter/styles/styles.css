@@ -11,13 +11,28 @@
   --color-dark-3xl: #292929;
   --color-primary: #f1cdb3;
   --color-primary-light: #fddcc4;
+  --font-family-h1: Georgia, serif;
+  --font-family-h2: Georgia, serif;
+  --font-family-h3: Georgia, serif;
+  --font-family-h4: Georgia, serif;
+  --font-family-h5: Georgia, serif;
+  --font-family-h6-p-ul: Arial, sans-serif;
+  --font-size-h1: 32px;
+  --font-size-h2: 44px;
+  --font-size-h3: 35px;
+  --font-size-h4: 20px;
+  --font-size-h5: 16px;
+  --font-size-h6: 13px;
+  --font-size-p-ul: 15px;
+  --font-weight: 400;
+  --word-spacing: 6%;
 }
 /* стили */
 body {
   margin: 0 auto;
   max-width: 1280px;
   width: 100%;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: var(--font-size-h1);
 }
 a,
 a:active,
@@ -48,20 +63,18 @@ header {
 
 .container-logo h1 {
   color: var(--color-primary);
-  font-weight: 400;
-  font-size: 32px;
+  font-weight: var(--font-weight);
+  font-size: var(--font-size-h1);
   line-height: 35.2px;
-  letter-spacing: 6%;
   padding: 0;
   margin: 0;
 }
 .container-logo h6 {
   color: var(--color-light-xl);
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 400;
-  font-size: 13px;
+  font-family: var(--font-family-h6-p-ul);
+  font-weight: var(--font-weight);
+  font-size: var(--font-size-h6);
   line-height: 14.95px;
-  letter-spacing: 10%;
   padding: 0;
   margin: 0;
 }
@@ -71,9 +84,9 @@ header {
   height: 60px;
 }
 ul {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 15px;
-  font-weight: 400;
+  font-family: var(--font-family-h6-p-ul);
+  font-size: var(--font-size-p-ul);
+  font-weight: var(--font-weight);
   line-height: 24px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -93,16 +106,16 @@ ul {
 }
 .container-not-only h2 {
   color: var(--color-light-xl);
-  font-size: 44px;
-  font-weight: 400;
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight);
   line-height: 57.2px;
 }
 
 .container-not-only p {
   color: var(--color-dark-s);
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 400;
-  font-size: 15px;
+  font-family: var(--font-size-h6);
+  font-weight: var(--font-weight);
+  font-size: var(--font-size-p-ul);
   line-height: 24px;
   padding-top: 5px;
 }
@@ -114,9 +127,8 @@ ul {
   gap: 10px;
   width: 207px;
   height: 52px;
-  font-size: 15px;
+  font-size: var(--font-size-p-ul);
   line-height: 22.1px;
-  letter-spacing: 6%;
   margin-top: 26px;
 }
 
@@ -140,17 +152,17 @@ ul {
 }
 .container-about h3 {
   color: var(--color-dark-l);
-  font-size: 35px;
-  font-weight: 400;
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight);
   line-height: 50px;
   margin: 10px 0;
 }
 
 .container-about p {
   color: var(--color-dark-xl);
-  font-family: Arial;
-  font-size: 15px;
-  font-weight: 400;
+  font-family: var(--font-family-h6-p-ul);
+  font-size: var(--font-size-p-ul);
+  font-weight: var(--font-weight);
   line-height: 24px;
   margin: 20px 0px;
 }
@@ -163,8 +175,8 @@ ul {
 }
 .container-our-friends h3 {
   color: var(--color-dark-l);
-  font-weight: 400;
-  font-size: 35px;
+  font-weight: var(--font-weight);
+  font-size: var(--font-size-h3);
   line-height: 45.5px;
   text-align: center;
 }
@@ -194,7 +206,7 @@ ul {
   display: grid;
   color: var(--color-dark-l);
   grid-template-columns: 52px 60px 270px 90px 270px 90px 270px 40px 52px;
-  font-weight: 400;
+  font-weight: var(--font-weight);
   font-size: 20px;
   line-height: 22.72px;
   border-radius: 9px;
@@ -227,15 +239,14 @@ ul {
 
 .container-help h3 {
   color: var(--color-dark-l);
-  font-weight: 400;
-  font-size: 35px;
+  font-weight: var(--font-weight);
+  font-size: var(--font-size-h3);
   line-height: 45.5px;
-  letter-spacing: 6%;
   margin: 0 auto;
 }
 .container-help h4 {
-  font-weight: 400;
-  font-size: 20px;
+  font-weight: var(--font-weight);
+  font-size: var(--font-size-h4);
   line-height: 23px;
 }
 .container-help-items {
@@ -276,12 +287,11 @@ ul {
 }
 .cont-in-add-content :nth-child(1) {
   align-self: center;
-  /* margin-top: 40px; */
 }
 .container-in-addition h3 {
   color: var(--color-dark-l);
-  font-size: 35px;
-  font-weight: 400;
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight);
   line-height: 50px;
   margin: 35px 0 0 0;
 }
@@ -294,8 +304,8 @@ ul {
 }
 .card-number h4 {
   color: var(--color-dark-l);
-  font-size: 20px;
-  font-weight: 400;
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight);
   margin: 20px 0 0 0;
   padding: 10px 15px 10px 15px;
   display: flex;
@@ -303,8 +313,8 @@ ul {
 }
 .container-in-addition h5 {
   color: var(--color-dark-l);
-  font-size: 15px;
-  font-weight: 400;
+  font-size: var(--font-size-h5);
+  font-weight: var(--font-weight);
   line-height: 17px;
   width: 307px;
   height: 17px;
@@ -315,7 +325,7 @@ ul {
 .container-in-addition p {
   color: var(--color-dark-m);
   font-size: 12px;
-  font-weight: 400;
+  font-weight: var(--font-weight);
   font-style: italic;
   width: 380px;
   height: 72px;
@@ -341,20 +351,17 @@ footer {
 }
 
 .footer-cont h3 {
-  font-weight: 400;
-  font-size: 35px;
+  font-weight: var(--font-weight);
+  font-size: var(--font-size-h3);
   line-height: 45.5px;
-  letter-spacing: 6%;
   color: var(--color-light-xl);
   margin: 0;
 }
 .footer-cont h4 {
-  font-size: 20px;
-  font-weight: 400;
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight);
   line-height: 23px;
-  letter-spacing: 6%;
   color: var(--color-primary);
-  /* padding-top: 40px; */
   margin: 0;
 }
 
