@@ -128,15 +128,16 @@ ul {
 }
 .button-pets {
   background-color: var(--color-primary);
-  padding: 15px 45px;
   border-radius: 100px;
-  gap: 10px;
   width: 211px;
   height: 56px;
   line-height: 22.1px;
   margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.button-pets :nth-child(1) {
+.button-pets a {
   width: 117px;
   height: 22px;
   letter-spacing: 1px;
@@ -208,13 +209,16 @@ ul {
   background-color: var(--color-primary);
   cursor: pointer;
   margin: 0px 465px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .button-pets2 a {
   color: var(--color-dark-xl);
   font-family: var(--font-size-h1);
   font-weight: var(--font-weight);
   font-size: 17px;
-  letter-spacing: 1.1px;
+  letter-spacing: 1.2px;
   width: 171px;
   height: 22px;
 }
@@ -394,12 +398,7 @@ ul {
 footer {
   background-image: url("../img/footer-gradient-background.png");
 }
-.contacts {
-  display: grid;
-  grid-template-rows: auto;
-  gap: 40px;
-  height: 234px;
-}
+
 .footer-cont {
   padding: 40px 40px 0px 40px;
   display: grid;
@@ -415,18 +414,7 @@ footer {
   margin: 16px 0 40px 0;
   letter-spacing: 3.6px;
 }
-.contacts {
-  width: 278px;
-  height: 234px;
-}
 
-.adresses {
-  width: 302px;
-  height: 234px;
-}
-/* .footer-cont h4 img {
-  padding-right: 20px;
-} */
 .footer-cont h4 {
   font-size: var(--font-size-h4);
   font-weight: var(--font-weight);
