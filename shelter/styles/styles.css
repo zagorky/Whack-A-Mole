@@ -25,7 +25,7 @@
   --font-size-h6: 13px;
   --font-size-p-ul: 15px;
   --font-weight: 400;
-  --word-spacing: 6%;
+  --letter-spacing: 3px;
 }
 /* стили */
 body {
@@ -39,6 +39,7 @@ a:active,
 a:hover,
 a:-webkit-any-link {
   text-decoration: none;
+  color: var(--color-primary-light);
 }
 button,
 button:active,
@@ -55,10 +56,11 @@ li {
   background-image: url("/shelter/img/start-screen-gradient-background.jpg");
 }
 header {
-  max-width: 1200px;
+  width: 1200px;
   padding: 30px 40px;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  height: 60px;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .container-logo h1 {
@@ -68,6 +70,7 @@ header {
   line-height: 35.2px;
   padding: 0;
   margin: 0;
+  letter-spacing: var(--letter-spacing);
 }
 .container-logo h6 {
   color: var(--color-light-xl);
@@ -75,29 +78,32 @@ header {
   font-weight: var(--font-weight);
   font-size: var(--font-size-h6);
   line-height: 14.95px;
-  padding: 0;
+  padding: 10px 5px;
   margin: 0;
+  letter-spacing: 1.4px;
+}
+nav {
+  display: grid;
+  justify-content: end;
 }
 
-.container-logo {
-  max-width: 184px;
-  height: 60px;
-}
 ul {
   font-family: var(--font-family-h6-p-ul);
   font-size: var(--font-size-p-ul);
   font-weight: var(--font-weight);
   line-height: 24px;
+  width: 443px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
+  grid-template-columns: 114px 58px 106px 60px;
+  gap: 35px;
 }
+
 /* not-only */
 
 .container-not-only {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  margin: 20px 40px;
+  margin: 60px 40px 20px 40px;
 }
 .cont-not-only-content {
   max-width: 460px;
@@ -109,11 +115,12 @@ ul {
   font-size: var(--font-size-h2);
   font-weight: var(--font-weight);
   line-height: 57.2px;
+  letter-spacing: 1.5px;
 }
 
 .container-not-only p {
   color: var(--color-dark-s);
-  font-family: var(--font-size-h6);
+  font-family: var(--font-family-h6-p-ul);
   font-weight: var(--font-weight);
   font-size: var(--font-size-p-ul);
   line-height: 24px;
@@ -156,6 +163,8 @@ ul {
   font-weight: var(--font-weight);
   line-height: 50px;
   margin: 10px 0;
+  letter-spacing: var(--letter-spacing);
+  word-spacing: var(--word-spacing);
 }
 
 .container-about p {
