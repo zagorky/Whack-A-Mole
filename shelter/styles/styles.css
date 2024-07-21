@@ -269,8 +269,8 @@ ul {
 /* help */
 .container-help {
   background-color: var(--color-light-xl);
-  padding: 80px 40px;
-  height: 611px;
+  padding: 85px 40px;
+  height: 450px;
   text-align: center;
 }
 
@@ -280,14 +280,16 @@ ul {
   font-size: var(--font-size-h3);
   line-height: 45.5px;
   margin: 0 auto;
+  letter-spacing: 3.1px;
 }
 .container-help h4 {
   font-weight: var(--font-weight);
   font-size: var(--font-size-h4);
   line-height: 23px;
+  letter-spacing: 1.8px;
 }
 .container-help-items {
-  margin: 60px 87px 0px 87px;
+  margin: 56px 87px 0px 87px;
   color: var(--color-dark-l);
   max-width: 1026px;
   display: grid;
