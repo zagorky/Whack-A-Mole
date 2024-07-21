@@ -197,16 +197,26 @@ ul {
   font-size: var(--font-size-h3);
   line-height: 45.5px;
   text-align: center;
+  letter-spacing: 3.3px;
 }
 .container-our-friends button {
   border: 2px solid #f1cdb3;
   border-radius: 100px;
-  padding: 15px 45px;
+  padding: 0;
   width: 261px;
   height: 52px;
   background-color: var(--color-primary);
   cursor: pointer;
-  margin: 0px 470px;
+  margin: 0px 465px;
+}
+.container-our-friends button a {
+  color: var(--color-dark-xl);
+  font-family: var(--font-size-h1);
+  font-weight: var(--font-weight);
+  font-size: 17px;
+  letter-spacing: 1.1px;
+  width: 171px;
+  height: 22px;
 }
 .arrow {
   border-radius: 100px;
@@ -214,22 +224,23 @@ ul {
   width: 52px;
   height: 52px;
   cursor: pointer;
-  margin: 190px 0;
+  margin: 192px 0px;
+  box-sizing: border-box;
 }
 .arrow img {
-  margin: 23px 19px;
+  margin: 20px 0;
 }
 .container-cards {
-  max-width: 1200px;
+  width: 1200px;
   display: grid;
   color: var(--color-dark-l);
-  grid-template-columns: 52px 60px 270px 90px 270px 90px 270px 40px 52px;
+  grid-template-columns: 52px 47px 270px 90px 270px 90px 270px 53px 52px;
   font-weight: var(--font-weight);
   font-size: 20px;
   line-height: 22.72px;
   border-radius: 9px;
   text-align: center;
-  margin: 60px 0;
+  margin: 60px 0px 60px 0px;
 }
 .container-cards button {
   border: 2px solid #f1cdb3;
@@ -238,13 +249,21 @@ ul {
   width: 187px;
   height: 52px;
   font-size: 17px;
+  font-family: var(--font-size-h1);
   background-color: var(--color-light-s);
-  margin: 10px 30px;
+  letter-spacing: 1px;
+  font-weight: var(--font-weight);
+  margin: 0px auto;
 }
 .card {
   background-color: var(--color-light-s);
   width: 270px;
   height: 435px;
+}
+.card p {
+  font-family: var(--font-family-h5);
+  letter-spacing: 1.3px;
+  margin: 25px auto 30px auto;
 }
 
 /* help */
