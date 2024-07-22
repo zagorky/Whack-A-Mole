@@ -1,0 +1,46 @@
+.container-not-only {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 60px 40px 20px 40px;
+}
+.cont-not-only-content {
+  max-width: 460px;
+  padding-top: 125px;
+  height: auto;
+}
+.container-not-only h2 {
+  color: var(--color-light-xl);
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight);
+  line-height: 57.2px;
+  letter-spacing: 1.5px;
+}
+
+.container-not-only p {
+  color: var(--color-dark-s);
+  font-family: var(--font-family-h6-p-ul);
+  font-weight: var(--font-weight);
+  font-size: var(--font-size-p-ul);
+  line-height: 24px;
+  padding-top: 5px;
+}
+.button-pets {
+  background-color: var(--color-primary);
+  border-radius: 100px;
+  width: 211px;
+  height: 56px;
+  line-height: 22.1px;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.button-pets a {
+  width: 117px;
+  height: 22px;
+  letter-spacing: 1px;
+  font-size: 17px;
+  font-family: var(--font-family-h1);
+  color: var(--color-dark-xl);
+  font-weight: var(--font-weight);
+}

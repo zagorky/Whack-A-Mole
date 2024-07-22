@@ -1,0 +1,34 @@
+footer {
+  background-image: url("../img/footer-gradient-background.png");
+}
+
+.footer-cont {
+  padding: 40px 40px 0px 40px;
+  display: grid;
+  gap: 160px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.footer-cont h3 {
+  font-weight: var(--font-weight);
+  font-size: var(--font-size-h3);
+  line-height: 45.5px;
+  color: var(--color-light-xl);
+  margin: 16px 0 40px 0;
+  letter-spacing: 3.6px;
+}
+
+.footer-cont h4 {
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight);
+  line-height: 23px;
+  margin: 0 0 40px 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 20px;
+  letter-spacing: 1.8px;
+}
+.footer-cont a {
+  color: var(--color-primary);
+}
