@@ -1,6 +1,7 @@
 .container-not-only {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  /* grid-template-columns: repeat(2, 1fr); */
+  grid-template-columns: 500px 700px;
   margin: 60px 40px 20px 40px;
 }
 .cont-not-only-content {
@@ -30,7 +31,7 @@
   width: 211px;
   height: 56px;
   line-height: 22.1px;
-  margin-top: 30px;
+  margin-top: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
