@@ -1,0 +1,105 @@
+.container-our-friends {
+  background-color: var(--color-light-l);
+  padding: 45px 45px 95px 45px;
+  max-width: 1200px;
+}
+.container-our-friends h3 {
+  color: var(--color-dark-l);
+  font-weight: var(--font-weight);
+  font-size: var(--font-size-h3);
+  line-height: 45.5px;
+  text-align: center;
+  letter-spacing: 3.3px;
+}
+.container-cards-pets-page {
+  width: 1200px;
+  display: grid;
+  color: var(--color-dark-l);
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 465px 465px;
+  font-weight: var(--font-weight);
+  font-size: 20px;
+  line-height: 22.72px;
+  border-radius: 9px;
+  text-align: center;
+  margin: 60px 0px 60px 0px;
+}
+.container-cards-pets-page button {
+  border: 2px solid #f1cdb3;
+  border-radius: 100px;
+  padding: 15px 45px;
+  width: 187px;
+  height: 52px;
+  font-size: 17px;
+  font-family: var(--font-size-h1);
+  background-color: var(--color-light-s);
+  letter-spacing: 1px;
+  font-weight: var(--font-weight);
+  margin: 0px auto;
+  cursor: pointer;
+}
+.card {
+  background-color: var(--color-light-s);
+  width: 270px;
+  height: 435px;
+}
+.card p {
+  font-family: var(--font-family-h5);
+  letter-spacing: 1.3px;
+  margin: 25px auto 30px auto;
+}
+.pagination {
+  width: 340px;
+  height: 52px;
+  display: grid;
+  margin: 0 430px;
+  grid-template-columns: repeat(5, 52px);
+  gap: 20px;
+}
+.pag-elem {
+  border-radius: 100px;
+  height: 52px;
+  width: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.pag-elem:hover {
+  background-color: var(--color-primary-light);
+  opacity: 90%;
+}
+.pagination :nth-child(3) {
+  background-color: var(--color-primary);
+  font-family: var(--font-size-h4);
+  font-weight: var(--font-weight);
+  font-size: var(--font-size-h4);
+}
+.pagination .pag-elem:nth-child(1) + svg {
+  transform: rotate(180deg);
+  filter: grayscale(2);
+  color: var(--color-dark-s);
+  border: solid 2px var(--color-dark-s);
+}
+.pagination .pag-elem:nth-child(2) + svg {
+  transform: rotate(180deg);
+  filter: grayscale(100%);
+  border: solid 2px var(--color-dark-s);
+}
+.pagination .pag-elem:nth-child(1) {
+  border: solid 2px var(--color-dark-s);
+}
+
+.pagination .pag-elem:nth-child(2) {
+  border: solid 2px var(--color-dark-s);
+}
+.pagination .pag-elem:nth-child(3) {
+  border: solid 2px var(--color-primary);
+}
+
+.pagination .pag-elem:nth-child(4) {
+  border: solid 2px var(--color-primary);
+}
+.pagination .pag-elem:nth-child(5) {
+  border: solid 2px var(--color-primary);
+}

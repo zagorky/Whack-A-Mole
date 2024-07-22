@@ -1,0 +1,77 @@
+.container-in-addition {
+  min-height: 458px;
+  background-color: var(--color-light-l);
+}
+.cont-in-add-content {
+  display: grid;
+  gap: 30px;
+  max-width: 915px;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 40px 180px;
+}
+.cont-in-add-content-img {
+  display: grid;
+  padding: 32px 1.5px 12px 0;
+}
+.cont-in-add-content-img img {
+  align-self: center;
+}
+.cont-in-add-content-text {
+  display: grid;
+}
+.cont-in-add-content-text h3 {
+  color: var(--color-dark-l);
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight);
+  line-height: 45px;
+  margin: 35px 0 0 0;
+  width: 300px;
+  height: 90px;
+  letter-spacing: 3.5px;
+}
+.card-number {
+  background-color: var(--color-primary);
+  border-radius: 9px;
+  margin: 20px 0 10px 0;
+  width: 349px;
+  height: 43px;
+}
+.card-number img {
+  margin: 0 10px 0 0;
+}
+.card-number h4 {
+  color: var(--color-dark-l);
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight);
+  font-family: var(--font-family-h4);
+  margin: 0;
+  padding: 10px 15px 10px 15px;
+  display: flex;
+  letter-spacing: 1.3px;
+}
+.card-number h4 a {
+  color: var(--color-dark-l);
+}
+
+.cont-in-add-content-text h5 {
+  color: var(--color-dark-l);
+  font-size: var(--font-size-h5);
+  font-weight: var(--font-weight);
+  line-height: 17px;
+  width: 307px;
+  height: 17px;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0 0 0;
+  letter-spacing: 1.09px;
+}
+.cont-in-add-content-text p {
+  color: var(--color-dark-m);
+  font-size: 12px;
+  font-weight: var(--font-weight);
+  font-style: italic;
+  font-family: var(--font-family-h6-p-ul);
+  line-height: 18px;
+  width: 380px;
+  height: 72px;
+}
