@@ -44,3 +44,7 @@
   color: var(--color-dark-xl);
   font-weight: var(--font-weight);
 }
+.button-pets:hover {
+  background-color: var(--color-primary);
+  opacity: 90%;
+}

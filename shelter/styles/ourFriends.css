@@ -24,6 +24,11 @@
   justify-content: center;
   align-items: center;
 }
+.button-pets2:hover {
+  background-color: var(--color-primary-light);
+  opacity: 90%;
+}
+
 .button-pets2 a {
   color: var(--color-dark-xl);
   font-family: var(--font-size-h1);

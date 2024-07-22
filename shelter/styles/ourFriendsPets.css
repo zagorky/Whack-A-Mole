@@ -65,6 +65,10 @@
   justify-content: center;
   cursor: pointer;
 }
+.pag-elem:hover {
+  background-color: var(--color-primary-light);
+  opacity: 90%;
+}
 .pagination :nth-child(3) {
   background-color: var(--color-primary);
   font-family: var(--font-size-h4);

@@ -43,7 +43,9 @@
   grid-template-columns: 114px 58px 106px 60px;
   gap: 35px;
 }
-
+header h1 a {
+  color: var(--color-primary);
+}
 .header li a {
   color: var(--color-dark-s);
 }
