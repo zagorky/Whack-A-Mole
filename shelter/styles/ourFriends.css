@@ -26,7 +26,8 @@
 }
 .button-pets2:hover {
   background-color: var(--color-primary-light);
-  opacity: 90%;
+  border: 2px solid var(--color-primary-light);
+  transition: all 0.5s ease-in-out;
 }
 
 .button-pets2 a {
@@ -46,6 +47,10 @@
   cursor: pointer;
   margin: 192px 0px;
   box-sizing: border-box;
+}
+.arrow:hover {
+  background-color: var(--color-primary);
+  transition: all 0.5s ease-in-out;
 }
 .arrow img {
   margin: 20px 0;
@@ -80,9 +85,23 @@
   background-color: var(--color-light-s);
   width: 270px;
   height: 435px;
+  border-radius: 9px;
 }
 .card p {
   font-family: var(--font-family-h5);
   letter-spacing: 1.3px;
   margin: 25px auto 30px auto;
+}
+
+.card:hover {
+  cursor: pointer;
+  background-color: var(--color-light-xl);
+  box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+  transition: all 0.5s ease-in-out;
+}
+
+.card:hover button {
+  background: var(--color-primary-light);
+  border-color: var(--color-primary-light);
+  transition: all 0.5s ease-in-out;
 }

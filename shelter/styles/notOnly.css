@@ -1,6 +1,5 @@
 .container-not-only {
   display: grid;
-  /* grid-template-columns: repeat(2, 1fr); */
   grid-template-columns: 500px 700px;
   margin: 60px 40px 20px 40px;
 }
@@ -46,6 +45,7 @@
   font-weight: var(--font-weight);
 }
 .button-pets:hover {
-  background-color: var(--color-primary);
-  opacity: 90%;
+  background-color: var(--color-primary-light);
+  border: var(--color-primary-light);
+  transition: all 0.5s ease-in-out;
 }

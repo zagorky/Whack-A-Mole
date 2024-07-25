@@ -46,10 +46,19 @@
 header h1 a {
   color: var(--color-primary);
 }
+header h1 a:hover {
+  color: var(--color-primary-light);
+  transition: all 0.5s ease-in-out;
+}
 .header li a {
   color: var(--color-dark-s);
 }
 .header li a:hover {
   color: var(--color-light-s);
-  text-decoration: underline 2px #f1cdb3;
+  transition: all 0.5s ease-in-out;
+}
+.header li .active {
+  cursor: default;
+  color: var(--color-light-s);
+  text-decoration: underline 3px #f1cdb3;
 }
