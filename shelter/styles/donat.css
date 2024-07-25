@@ -7,7 +7,7 @@
   gap: 30px;
   max-width: 915px;
   grid-template-columns: repeat(2, 1fr);
-  padding: 40px 180px;
+  padding: 45px 180px;
 }
 .cont-in-add-content-img {
   display: grid;
