@@ -36,6 +36,11 @@
   width: 349px;
   height: 43px;
 }
+.card-number:hover {
+  background-color: var(--color-primary-light);
+  border: var(--color-primary-light);
+  transition: all 1s ease-in-out;
+}
 .card-number img {
   margin: 0 10px 0 0;
 }

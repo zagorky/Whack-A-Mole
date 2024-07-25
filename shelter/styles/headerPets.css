@@ -13,6 +13,10 @@ h1 {
   margin: 0;
   letter-spacing: var(--letter-spacing);
 }
+h1 a:hover {
+  color: var(--color-dark-xxl);
+  transition: all 0.5s ease-in-out;
+}
 h1 a {
   color: var(--color-dark-l);
 }
@@ -46,5 +50,10 @@ h6 {
 }
 .header-pets-page li a:hover {
   color: var(--color-dark-xxl);
-  text-decoration: underline 2px var(--color-primary);
+  transition: all 0.5s ease-in-out;
+}
+.header-pets-page li .active {
+  cursor: default;
+  color: var(--color-dark-xxl);
+  text-decoration: underline 3px #f1cdb3;
 }

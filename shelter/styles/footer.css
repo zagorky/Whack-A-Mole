@@ -30,7 +30,11 @@ footer {
   color: var(--color-primary);
   height: 23px;
 }
-
+.footer-cont a:hover {
+  color: var(--color-primary-light);
+  height: 23px;
+  transition: all 0.5s ease-in-out;
+}
 .contacts h4 {
   display: grid;
   grid-template-columns: 40px 191px;
