@@ -7,9 +7,9 @@
   color: var(--color-dark-l);
   font-weight: var(--font-weight);
   font-size: var(--font-size-h3);
-  line-height: 45.5px;
+  line-height: 130%;
   text-align: center;
-  letter-spacing: 3.3px;
+  letter-spacing: 0.09em;
 }
 .button-pets2 {
   border: 2px solid #f1cdb3;
@@ -35,7 +35,8 @@
   font-family: var(--font-size-h1);
   font-weight: var(--font-weight);
   font-size: 17px;
-  letter-spacing: 1.2px;
+  line-height: 130%;
+  letter-spacing: 0.09em;
   width: 171px;
   height: 22px;
 }
@@ -76,7 +77,7 @@
   font-size: 17px;
   font-family: var(--font-size-h1);
   background-color: var(--color-light-s);
-  letter-spacing: 1px;
+  letter-spacing: 0.08em;
   font-weight: var(--font-weight);
   margin: 0px auto;
   cursor: pointer;
@@ -89,7 +90,7 @@
 }
 .card p {
   font-family: var(--font-family-h5);
-  letter-spacing: 1.3px;
+  letter-spacing: 0.06em;
   margin: 25px auto 30px auto;
 }
 
