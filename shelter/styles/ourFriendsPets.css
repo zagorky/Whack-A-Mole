@@ -7,10 +7,11 @@
   color: var(--color-dark-l);
   font-weight: var(--font-weight);
   font-size: var(--font-size-h3);
-  line-height: 45.5px;
+  line-height: 130%;
   text-align: center;
-  letter-spacing: 3.3px;
+  letter-spacing: 0.09em;
   margin-top: 0;
+  margin-left: 10px;
 }
 .container-cards-pets-page {
   width: 1200px;

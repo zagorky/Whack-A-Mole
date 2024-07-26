@@ -8,10 +8,10 @@
 h1 {
   font-weight: var(--font-weight);
   font-size: var(--font-size-h1);
-  line-height: 35.2px;
+  line-height: 110%;
   padding: 0;
   margin: 0;
-  letter-spacing: var(--letter-spacing);
+  letter-spacing: 0.09em;
 }
 h1 a:hover {
   color: var(--color-dark-xxl);
@@ -28,7 +28,7 @@ h6 {
   line-height: 14.95px;
   padding: 10px 5px;
   margin: 0;
-  letter-spacing: 1.4px;
+  letter-spacing: 0.09em;
 }
 
 .header-pets-page nav {
