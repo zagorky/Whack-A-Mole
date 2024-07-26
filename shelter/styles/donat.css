@@ -1,5 +1,5 @@
 .container-in-addition {
-  min-height: 463px;
+  height: 463px;
   background-color: var(--color-light-l);
 }
 .cont-in-add-content {
@@ -13,7 +13,7 @@
   width: 505px;
   height: 261px;
   display: grid;
-  margin: 48px 0 10px 2px;
+  margin: 45px 0 10px 2px;
 }
 .cont-in-add-content-img img {
   align-self: center;
@@ -70,7 +70,7 @@
   height: 17px;
   display: flex;
   justify-content: space-between;
-  margin: 22px 0 0 0;
+  margin: 18px 0 0 0;
   letter-spacing: 0.07em;
 }
 .cont-in-add-content-text p {
