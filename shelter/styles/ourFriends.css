@@ -1,7 +1,14 @@
-.container-our-friends {
+#pets {
   background-color: var(--color-light-l);
+}
+.container-our-friends {
   padding: 45px 45px 95px 45px;
   max-width: 1200px;
+}
+.wrapper-pets {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 .container-our-friends h3 {
   color: var(--color-dark-l);

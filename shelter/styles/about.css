@@ -1,12 +1,17 @@
 .container-about {
   background-color: var(--color-light-xl);
-  padding: 60px 40px 95px 40px;
+}
+.wrapper-about {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1280px;
 }
 .cont-about-content {
   max-width: 1200px;
   display: grid;
   grid-template-columns: 500px 550px;
   gap: 95px;
+  padding: 60px 40px 95px 40px;
 }
 .cont-about-content img {
   padding: 0 175px 0 175px;

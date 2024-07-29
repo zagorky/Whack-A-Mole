@@ -1,3 +1,8 @@
+.wrapper-header {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
 .header-pets-page {
   width: 1200px;
   padding: 30px 40px;

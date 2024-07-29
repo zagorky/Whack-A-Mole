@@ -1,8 +1,18 @@
 .container-help {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.wrapper-help {
   background-color: var(--color-light-xl);
   padding: 80px 40px 84px 40px;
   height: 450px;
+  max-width: 1280px;
+  margin: 0 auto;
   text-align: center;
+}
+.cont-help-content {
+  max-width: 1280px;
 }
 
 .container-help h3 {
