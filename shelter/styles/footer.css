@@ -1,8 +1,15 @@
 footer {
   height: 350px;
-  background-image: url("../img/footer-gradient-background.png");
+  background: url("../img/background-footer.png"),
+    linear-gradient(0deg, #211f20, #211f20),
+    radial-gradient(110.67% 538.64% at 5.73% 50%, #513d2f 0%, #1a1a1c 100%);
 }
 
+.wrapper-footer {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
 .footer-cont {
   padding: 40px 40px 0px 40px;
   display: grid;

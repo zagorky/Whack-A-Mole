@@ -2,6 +2,11 @@
   height: 463px;
   background-color: var(--color-light-l);
 }
+.wrapper-in-add {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
 .cont-in-add-content {
   display: grid;
   gap: 30px;

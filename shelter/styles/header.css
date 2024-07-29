@@ -1,5 +1,12 @@
 .container-fb {
-  background-image: url("../img/start-screen-gradient-background.jpg");
+  background: url("../img/background-header.png"),
+    linear-gradient(0deg, #211f20, #211f20),
+    radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%);
+}
+.wrapper-fb {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 .header {
   width: 1200px;

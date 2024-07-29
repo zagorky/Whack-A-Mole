@@ -1,5 +1,13 @@
+.wrapper-pets {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
 .container-our-friends {
   background-color: var(--color-light-l);
+}
+.wrapper-pets {
   padding: 80px 40px 95px 40px;
   max-width: 1200px;
 }
