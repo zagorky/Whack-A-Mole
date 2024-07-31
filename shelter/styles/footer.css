@@ -1,8 +1,7 @@
 footer {
   height: 350px;
   background: url("../img/background-footer.png"),
-    linear-gradient(0deg, #211f20, #211f20),
-    radial-gradient(110.67% 538.64% at 5.73% 50%, #513d2f 0%, #1a1a1c 100%);
+    radial-gradient(60% 150% at 0% 30%, #513d2f 0%, #1a1a1c 100%);
 }
 
 .wrapper-footer {
@@ -34,6 +33,7 @@ footer {
   letter-spacing: 0.09em;
 }
 .footer-cont a {
+  font-family: var(--font-size-h4);
   color: var(--color-primary);
   height: 23px;
 }
