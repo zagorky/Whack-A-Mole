@@ -17,9 +17,9 @@
   font-size: var(--font-size-h3);
   line-height: 130%;
   text-align: center;
-  letter-spacing: 0.09em;
   margin-top: 0;
-  margin-left: 10px;
+  font-family: var(--font-family-h3);
+  letter-spacing: 0.06em;
 }
 .container-cards-pets-page {
   width: 1200px;
@@ -39,12 +39,12 @@
   border: 2px solid #f1cdb3;
   border-radius: 100px;
   padding: 15px 45px;
-  width: 187px;
+  width: 189x;
   height: 52px;
   font-size: 17px;
-  font-family: var(--font-size-h1);
+  font-family: var(--font-family-h3);
+  letter-spacing: 0.06em;
   background-color: var(--color-light-s);
-  letter-spacing: 1px;
   font-weight: var(--font-weight);
   margin: 0px auto;
   cursor: pointer;
@@ -59,8 +59,9 @@
 }
 .card p {
   font-family: var(--font-family-h5);
-  letter-spacing: 1.3px;
   margin: 25px auto 30px auto;
+  font-family: var(--font-family-h3);
+  letter-spacing: 0.06em;
 }
 .card:hover {
   cursor: pointer;

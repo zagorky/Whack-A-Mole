@@ -29,7 +29,8 @@
   height: 90px;
   margin: 0;
   line-height: 45px;
-  letter-spacing: 0.09em;
+  font-family: var(--font-family-h3);
+  letter-spacing: 0.06em;
 }
 
 .container-about p {

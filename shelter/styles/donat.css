@@ -34,7 +34,8 @@
   margin: 35px 0 0 0;
   width: 300px;
   height: 90px;
-  letter-spacing: 0.11em;
+  font-family: var(--font-family-h3);
+  letter-spacing: 0.06em;
 }
 .card-number {
   background-color: var(--color-primary);
@@ -68,15 +69,15 @@
 
 .cont-in-add-content-text h5 {
   color: var(--color-dark-l);
-  font-size: var(--font-size-h5);
+  font-size: 15px;
   font-weight: var(--font-weight);
   line-height: 110%;
-  width: 308px;
+  width: 315px;
   height: 17px;
   display: flex;
-  justify-content: space-between;
   margin: 18px 0 0 0;
-  letter-spacing: 0.07em;
+  font-family: var(--font-family-h5);
+  letter-spacing: 0.03em;
 }
 .cont-in-add-content-text p {
   color: var(--color-dark-m);
