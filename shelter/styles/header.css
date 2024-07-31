@@ -22,7 +22,8 @@
   line-height: 110%;
   padding: 0;
   margin: 0;
-  letter-spacing: 0.09em;
+  font-family: var(--font-family-h3);
+  letter-spacing: 0.06em;
 }
 .container-logo h6 {
   color: var(--color-light-xl);

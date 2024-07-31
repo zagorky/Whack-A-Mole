@@ -21,13 +21,17 @@
   font-size: var(--font-size-h3);
   line-height: 130%;
   margin: 0 auto;
-  letter-spacing: 0.09em;
+  /* letter-spacing: 0.09em; */
+  font-family: var(--font-family-h3);
+  letter-spacing: 0.06em;
 }
 .container-help h4 {
   font-weight: var(--font-weight);
   font-size: var(--font-size-h4);
   line-height: 115%;
-  letter-spacing: 0.09em;
+  /* letter-spacing: 0.09em; */
+  font-family: var(--font-family-h3);
+  letter-spacing: 0.06em;
 }
 .container-help-items {
   margin: 60px 87px 0px 87px;
@@ -40,12 +44,12 @@
 .cont-help-line1 {
   display: grid;
   margin: 0;
-  grid-template-columns: 82px 150px 60px 153px 101px;
+  grid-template-columns: 83px 150px 60px 154px 101px;
   gap: 120px;
 }
 .cont-help-line2 {
   display: grid;
   gap: 120px;
-  grid-template-columns: 84px 101px 165px 143px;
+  grid-template-columns: 84px 101px 166px 144px;
   padding: 0 84px;
 }
