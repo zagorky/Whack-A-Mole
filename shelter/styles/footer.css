@@ -33,7 +33,6 @@ footer {
   letter-spacing: 0.09em;
 }
 .footer-cont a {
-  font-family: var(--font-size-h4);
   color: var(--color-primary);
   height: 23px;
 }
