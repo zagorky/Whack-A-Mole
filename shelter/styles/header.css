@@ -58,13 +58,18 @@ header h1 a:hover {
 }
 .header li a {
   color: var(--color-dark-s);
+  height: 27px;
 }
 .header li a:hover {
   color: var(--color-light-s);
   transition: all 0.5s ease-in-out;
 }
-.header li .active {
+.header li {
+  height: 27px;
+}
+.active {
   cursor: default;
   color: var(--color-light-s);
-  text-decoration: underline 3px #f1cdb3;
+  border-bottom: solid 3px #f1cdb3;
+  box-sizing: border-box;
 }
