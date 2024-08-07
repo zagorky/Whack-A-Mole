@@ -64,7 +64,6 @@
 }
 .card-number h4 a {
   color: var(--color-dark-l);
-  width: 319px;
 }
 
 .cont-in-add-content-text h5 {
@@ -72,12 +71,10 @@
   font-size: 15px;
   font-weight: var(--font-weight);
   line-height: 110%;
-  width: 315px;
-  height: 17px;
   display: flex;
   margin: 18px 0 0 0;
   font-family: var(--font-family-h5);
-  letter-spacing: 0.03em;
+  letter-spacing: 0.06em;
 }
 .cont-in-add-content-text p {
   color: var(--color-dark-m);
@@ -88,4 +85,27 @@
   line-height: 18px;
   width: 380px;
   height: 72px;
+}
+
+@media screen and (width<769px) {
+  .container-in-addition {
+    height: auto;
+    padding-bottom: 85px;
+  }
+  .cont-in-add-content {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+  }
+  .cont-in-add-content-img {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 15px 0;
+  }
+  .cont-in-add-content-text h3 {
+    margin-top: 25px;
+  }
 }
