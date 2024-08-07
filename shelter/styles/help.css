@@ -21,7 +21,6 @@
   font-size: var(--font-size-h3);
   line-height: 130%;
   margin: 0 auto;
-  /* letter-spacing: 0.09em; */
   font-family: var(--font-family-h3);
   letter-spacing: 0.06em;
 }
@@ -29,7 +28,6 @@
   font-weight: var(--font-weight);
   font-size: var(--font-size-h4);
   line-height: 115%;
-  /* letter-spacing: 0.09em; */
   font-family: var(--font-family-h3);
   letter-spacing: 0.06em;
 }
@@ -52,4 +50,7 @@
   gap: 120px;
   grid-template-columns: 84px 101px 166px 144px;
   padding: 0 84px;
+}
+
+@media screen and (width<769px) {
 }
