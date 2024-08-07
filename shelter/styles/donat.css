@@ -86,3 +86,26 @@
   width: 380px;
   height: 72px;
 }
+
+@media screen and (width<769px) {
+  .container-in-addition {
+    height: auto;
+    padding-bottom: 85px;
+  }
+  .cont-in-add-content {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+  }
+  .cont-in-add-content-img {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 15px 0;
+  }
+  .cont-in-add-content-text h3 {
+    margin-top: 25px;
+  }
+}
