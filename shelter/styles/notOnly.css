@@ -80,4 +80,26 @@
 }
 
 @media screen and (width<=320px) {
+  .container-not-only {
+    align-items: center;
+  }
+  .container-not-only h2 {
+    font-size: 25px;
+    text-align: center;
+    letter-spacing: 0.06em;
+  }
+  .container-not-only p {
+    text-align: center;
+  }
+  .cont-not-only-content {
+    padding-top: 10px;
+  }
+  .container-not-only img {
+    width: 260px;
+    margin: 8px 10px 0 auto;
+    align-items: center;
+  }
+  .button-pets {
+    margin-top: 45px;
+  }
 }
