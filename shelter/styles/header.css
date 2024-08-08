@@ -34,10 +34,6 @@
   margin: 0;
   letter-spacing: 0.09em;
 }
-/* .header nav {
-  display: grid; 
-  justify-content: end;
-} */
 
 .header ul {
   font-family: var(--font-family-h6-p-ul);
@@ -86,10 +82,22 @@ header h1 a:hover {
   }
 }
 
-/* @media screen and (width<=320px) {
-  .wrapper-fb {
+@media screen and (width<376px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    gap: 66px;
     width: 100%;
-    max-width: 320px;
-    margin: 0 auto;
+    padding: 30px 20px;
+    max-width: 283px;
   }
-} */
+  nav {
+    display: none;
+  }
+  .burger {
+    background: url(../img/Burger.svg);
+    height: 22px;
+    width: 30px;
+    margin: auto 0;
+  }
+}
