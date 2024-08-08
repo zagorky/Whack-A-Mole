@@ -1,5 +1,5 @@
 .container-in-addition {
-  height: 463px;
+  height: 455px;
   background-color: var(--color-light-l);
 }
 .wrapper-in-add {
@@ -12,7 +12,7 @@
   gap: 30px;
   max-width: 915px;
   grid-template-columns: repeat(2, 1fr);
-  padding: 45px 180px;
+  padding: 40px 180px;
 }
 .cont-in-add-content-img {
   width: 505px;
@@ -90,12 +90,12 @@
 @media screen and (width<769px) {
   .container-in-addition {
     height: auto;
-    padding-bottom: 85px;
+    padding-bottom: 45px;
   }
   .cont-in-add-content {
     display: flex;
     flex-direction: column-reverse;
-    padding: 0;
+    padding-top: 55px;
     justify-content: center;
     align-items: center;
   }

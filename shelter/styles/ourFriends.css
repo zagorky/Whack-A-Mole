@@ -11,6 +11,10 @@
   padding: 45px 45px 95px 45px;
   max-width: 1200px;
   margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
 }
 .container-our-friends h3 {
   color: var(--color-dark-l);
@@ -29,7 +33,7 @@
   height: 50px;
   background-color: var(--color-primary);
   cursor: pointer;
-  margin: 0px auto;
+  margin: 35px auto 0px auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -67,8 +71,6 @@
   margin: 20px 0;
 }
 .container-cards {
-  width: 100%;
-  max-width: 1200px;
   color: var(--color-dark-l);
   display: flex;
   font-weight: var(--font-weight);
@@ -78,7 +80,6 @@
   text-align: center;
   justify-content: space-between;
   gap: 53px;
-  margin: 60px auto;
 }
 .cards {
   display: flex;
@@ -130,19 +131,30 @@
   .container-our-friends {
     margin: 0;
     padding-top: 45px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
   }
 
   .container-cards {
     margin: 0;
-    padding-top: 25px;
-    padding-bottom: 60px;
+
     gap: 0px;
+    min-width: 708px;
+    width: 100%;
   }
 
   .cards {
     gap: 40px;
+    padding: 0 10px;
   }
   .card:last-child {
     display: none;
+  }
+  .arrow {
+    margin: auto 20px auto 0px;
+  }
+  .arrow:first-child {
+    margin: auto 0 auto 20px;
   }
 }
