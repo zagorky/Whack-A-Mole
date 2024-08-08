@@ -53,6 +53,9 @@
 }
 
 @media screen and (width<769px) {
+  .wrapper-help {
+    padding-top: 170px;
+  }
   .container-help {
     display: flex;
     flex-direction: column;
@@ -63,7 +66,10 @@
   }
   .container-help-items {
     margin: 0 auto;
-    padding: 60px 0px;
+    padding-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
   }
   .items {
     display: flex;
