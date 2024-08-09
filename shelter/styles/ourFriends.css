@@ -127,7 +127,7 @@
   transition: all 0.5s ease-in-out;
 }
 
-@media screen and (width<769px) {
+@media screen and (max-width: 769px) {
   .container-our-friends {
     margin: 0;
     padding-top: 45px;
@@ -159,7 +159,7 @@
   }
 }
 
-@media screen and (width<321px) {
+@media screen and (max-width: 321px) {
   .container-our-friends h3 {
     font-size: 25px;
     margin: 0 auto;

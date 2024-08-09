@@ -79,7 +79,7 @@
   }
 }
 
-@media screen and (width<=320px) {
+@media screen and (max-width: 321px) {
   .container-not-only {
     align-items: center;
   }
@@ -90,6 +90,7 @@
   }
   .container-not-only p {
     text-align: center;
+    max-width: 300px;
   }
   .cont-not-only-content {
     padding-top: 10px;

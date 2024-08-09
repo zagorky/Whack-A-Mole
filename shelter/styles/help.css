@@ -6,7 +6,6 @@
 .wrapper-help {
   background-color: var(--color-light-xl);
   padding: 85px 40px 80px 40px;
-  /* height: 450px; */
   text-align: center;
 }
 .cont-help-content {
@@ -52,7 +51,7 @@
   padding: 0 84px;
 }
 
-@media screen and (width<769px) {
+@media screen and (max-width: 769px) {
   .wrapper-help {
     padding-top: 170px;
   }
@@ -79,7 +78,7 @@
   }
 }
 
-@media screen and (width<321px) {
+@media screen and (max-width: 321px) {
   .container-help h3 {
     font-size: 25px;
   }
@@ -87,13 +86,16 @@
     font-size: 15px;
   }
   .wrapper-help {
-    padding-top: 85px;
+    padding: 85px 0 0 0;
   }
   .container-help-items {
-    /* margin: 0 auto;
-    padding-top: 60px; */
+    padding: 40px 0 20px 0;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+    gap: 10px 0px;
+  }
+  .items img {
+    width: 50px;
+    height: 50px;
   }
 }
