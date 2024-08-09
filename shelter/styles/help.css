@@ -78,3 +78,22 @@
     flex-direction: column;
   }
 }
+
+@media screen and (width<321px) {
+  .container-help h3 {
+    font-size: 25px;
+  }
+  .container-help h4 {
+    font-size: 15px;
+  }
+  .wrapper-help {
+    padding-top: 85px;
+  }
+  .container-help-items {
+    /* margin: 0 auto;
+    padding-top: 60px; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}

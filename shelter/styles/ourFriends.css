@@ -140,7 +140,7 @@
     margin: 0;
 
     gap: 0px;
-    min-width: 708px;
+    /* min-width: 708px; */
     width: 100%;
   }
 
@@ -167,5 +167,18 @@
   .card:nth-child(2),
   .card:last-child {
     display: none;
+  }
+
+  .arrow {
+    display: none;
+  }
+  .container-our-friends {
+    padding: 40px 0 0 0;
+  }
+  .cards {
+    padding: 15px 25px;
+  }
+  .button-pets2 {
+    margin-top: 75px;
   }
 }
