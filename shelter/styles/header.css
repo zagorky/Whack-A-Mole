@@ -70,6 +70,9 @@ header h1 a:hover {
   border-bottom: solid 3px #f1cdb3;
   box-sizing: border-box;
 }
+.burger {
+  display: none;
+}
 
 @media screen and (max-width: 768px) {
   .header {
@@ -100,5 +103,6 @@ header h1 a:hover {
     height: 22px;
     width: 30px;
     margin: auto 0;
+    display: flex;
   }
 }

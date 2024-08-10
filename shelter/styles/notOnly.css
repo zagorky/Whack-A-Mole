@@ -50,6 +50,9 @@
   transition: all 0.5s ease-in-out;
 }
 @media screen and (width<769px) {
+  .container-not-only h2 {
+    margin-top: 30px;
+  }
   .cont-not-only-content {
     padding: 0;
     max-width: 460px;
@@ -65,7 +68,7 @@
     margin: 0;
   }
   .cont-not-only-content p {
-    margin: 38px auto;
+    margin: 42px auto;
     padding: 0;
   }
   .container-not-only img {
@@ -92,15 +95,13 @@
     text-align: center;
     max-width: 300px;
   }
-  .cont-not-only-content {
-    padding-top: 10px;
-  }
+
   .container-not-only img {
     width: 260px;
     margin: 8px 10px 0 auto;
     align-items: center;
   }
   .button-pets {
-    margin-top: 45px;
+    margin-top: 40px;
   }
 }

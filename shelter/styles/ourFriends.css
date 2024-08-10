@@ -138,9 +138,7 @@
 
   .container-cards {
     margin: 0;
-
     gap: 0px;
-    /* min-width: 708px; */
     width: 100%;
   }
 
@@ -157,6 +155,12 @@
   .arrow:first-child {
     margin: auto 0 auto 20px;
   }
+  .wrapper-pets {
+    padding-bottom: 90px;
+  }
+  .button-pets2 {
+    margin-top: 31px;
+  }
 }
 
 @media screen and (max-width: 321px) {
@@ -169,8 +173,16 @@
     display: none;
   }
 
-  .arrow {
-    display: none;
+  .arrow:first-child,
+  .arrow:last-child {
+    position: absolute;
+    margin-top: 473px;
+  }
+  .arrow:first-child {
+    margin-left: 68px;
+  }
+  .arrow:last-child {
+    margin-left: 200px;
   }
   .container-our-friends {
     padding: 40px 0 0 0;
@@ -180,5 +192,8 @@
   }
   .button-pets2 {
     margin-top: 75px;
+  }
+  .wrapper-pets {
+    padding-bottom: 0;
   }
 }
