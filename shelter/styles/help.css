@@ -97,7 +97,7 @@
   }
 }
 
-@media screen and (max-width: 321px) {
+@media screen and (max-width: 400px) {
   .container-help h3 {
     font-size: 25px;
   }
