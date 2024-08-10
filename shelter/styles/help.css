@@ -29,7 +29,8 @@
   letter-spacing: 0.06em;
 }
 .container-help-items {
-  margin: 58px 87px 0px 87px;
+  margin: 58px auto 0 auto;
+  /* margin: 58px 87px 0px 87px; */
   color: var(--color-dark-l);
   max-width: 1028px;
   width: 100%;
@@ -50,7 +51,25 @@
   grid-template-columns: 84px 101px 166px 144px;
   padding: 0 84px;
 }
-
+@media screen and (max-width: 1060px) {
+  .container-help {
+    display: flex;
+    flex-direction: column;
+  }
+  .container-help-items {
+    margin: 0 auto;
+    padding-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px 2px;
+  }
+  .items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
 @media screen and (max-width: 769px) {
   .wrapper-help {
     padding-top: 80px;
