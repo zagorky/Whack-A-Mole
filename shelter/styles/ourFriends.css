@@ -148,6 +148,7 @@
     margin: 0;
     gap: 0px;
     width: 100%;
+    justify-content: center;
   }
 
   .cards {
