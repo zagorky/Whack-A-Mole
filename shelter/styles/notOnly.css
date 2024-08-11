@@ -4,7 +4,7 @@
   margin: 60px 40px 20px 40px;
 }
 .cont-not-only-content {
-  width: 460px;
+  max-width: 36wv;
   padding-top: 125px;
   height: auto;
 }
@@ -65,12 +65,20 @@
     padding: 0;
     margin: 0;
   }
+  .cont-not-only-content {
+    text-align: center;
+  }
+  .button-pets {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 @media screen and (max-width: 769px) {
   .container-not-only h2 {
     margin-top: 30px;
   }
   .cont-not-only-content {
+    text-align: left;
     padding: 0;
     max-width: 460px;
     width: 100%;

@@ -10,7 +10,7 @@
 .cont-in-add-content {
   display: grid;
   gap: 30px;
-  max-width: 915px;
+  max-width: 71vw;
   grid-template-columns: repeat(2, 1fr);
   padding: 40px 180px;
 }
@@ -82,7 +82,7 @@
   line-height: 18px;
 }
 
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 1250px) {
   .container-in-addition {
     height: auto;
     padding-bottom: 60px;
@@ -93,24 +93,32 @@
     padding-top: 55px;
     justify-content: center;
     align-items: center;
-    max-width: 380px;
+    max-width: 90vw;
     margin-left: auto;
     margin-right: auto;
   }
 }
-
+@media screen and (max-width: 815px) {
+  .cont-in-add-content {
+    max-width: 70vw;
+  }
+}
 @media screen and (max-width: 769px) {
   .container-in-addition {
     height: auto;
-    padding-bottom: 60px;
+    padding-bottom: 50px;
   }
   .cont-in-add-content {
     display: flex;
     flex-direction: column-reverse;
     padding-top: 55px;
+    padding-left: 194px;
+    padding-right: 194px;
     justify-content: center;
     align-items: center;
-    max-width: 380px;
+    max-width: 49vw;
+    margin-left: 0;
+    margin-right: 0;
   }
   .cont-in-add-content-img {
     justify-content: center;
@@ -125,11 +133,24 @@
 
   .card-number {
     margin-bottom: 7px;
+    max-width: 350px;
   }
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 720px) {
+  .card-number h4 {
+    font-size: 0.75em;
+  }
   .cont-in-add-content-img img {
     height: 135.2px;
+  }
+
+  .cont-in-add-content {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 87vw;
+    text-align: center;
   }
 }
 @media screen and (max-width: 400px) {
@@ -166,7 +187,7 @@
   }
 
   .card-number {
-    max-width: 281px;
+    /* max-width: 87vw; */
     margin: 25px 0 10px 0;
   }
   .cont-in-add-content-text {
@@ -174,8 +195,10 @@
     flex-direction: column;
     align-items: center;
     padding-left: 0px;
+    width: 100%;
   }
   .cont-in-add-content {
     padding: 15px 0 0 0;
+    max-width: 88vw;
   }
 }

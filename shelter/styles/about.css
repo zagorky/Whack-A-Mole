@@ -17,7 +17,7 @@
   padding: 0 175px 0 175px;
 }
 .cont-about-text {
-  width: 430px;
+  width: 33vw;
   height: 380px;
   margin: 14px 0;
 }
@@ -44,7 +44,7 @@
 @media screen and (max-width: 1080px) {
   .cont-about-content {
     display: flex;
-    width: 100%;
+    width: 100vw;
     max-width: 768px;
     justify-content: center;
     align-items: center;
@@ -54,7 +54,11 @@
     margin-left: auto;
     margin-right: auto;
   }
+  .cont-about-text {
+    width: 56vw;
+  }
 }
+
 @media screen and (max-width: 769px) {
   .container-about {
     padding: 0;
@@ -75,6 +79,7 @@
     padding: 0;
   }
   .cont-about-text {
+    /* width: 56vw; */
     margin: 0;
   }
 }
