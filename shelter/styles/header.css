@@ -84,6 +84,8 @@ header h1 a:hover {
     max-height: 1165px;
     margin: 0 auto;
   }
+}
+@media screen and (max-width: 767px) {
   nav {
     display: none;
   }
@@ -95,18 +97,6 @@ header h1 a:hover {
     display: flex;
   }
 }
-/* @media screen and (max-width: 640px) {
-  nav {
-    display: none;
-  }
-  .burger {
-    background: url(../img/Burger.svg);
-    height: 22px;
-    width: 30px;
-    margin: auto 0;
-    display: flex;
-  }
-} */
 @media screen and (max-width: 321px) {
   .header {
     display: flex;
