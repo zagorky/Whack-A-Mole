@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
     <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
-
     <link rel="stylesheet" href="styles/styles.css" />
     <link rel="stylesheet" href="styles/header.css" />
     <link rel="stylesheet" href="styles/notOnly.css" />
@@ -25,16 +24,23 @@
             <h1 class="logo_name"><a href="#">Cozy House</a></h1>
             <h6>Shelter for pets in Boston</h6>
           </div>
-          <nav>
-            <ul>
+          <div class="burger-menu" id="burger-menu">
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+          </div>
+          <div class="overlay" id="overlay"></div>
+
+          <nav class="adaptive" id="adaptive">
+            <ul class="nav-links" id="nav-links">
               <li class="active">About the shelter</li>
               <li><a href="./pets.html">Our pets</a></li>
               <li><a href="#help">Help the shelter</a></li>
               <li><a href="#contacts">Contacts</a></li>
             </ul>
           </nav>
-          <div class="burger"></div>
         </header>
+
         <section class="container-not-only">
           <div class="cont-not-only-content">
             <h2>Not only people <br />need a house</h2>
