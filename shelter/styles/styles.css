@@ -44,7 +44,7 @@ button:hover {
   text-decoration: none;
 }
 li {
-  text-decoration: none;
+  /* text-decoration: none; */
   list-style-type: none;
 }
 * {

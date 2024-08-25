@@ -66,9 +66,6 @@ header h1 a:hover {
   box-sizing: border-box;
 }
 
-.burger {
-  display: none;
-}
 .burger-menu {
   display: none;
   width: 30px;
@@ -90,12 +87,54 @@ header h1 a:hover {
   background-color: var(--color-primary);
   transition: transform 0.4s ease-in-out;
 }
-
 body.menu-open {
   overflow: hidden;
 }
 
-@media screen and (max-width: 780.9px) {
+/* pets */
+.wrapper-header.pets-page {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.header.pets-page {
+  justify-content: space-between;
+  display: flex;
+}
+.pets-page a {
+  color: var(--color-dark-l);
+}
+.pets-page h1 a {
+  color: var(--color-dark-l);
+}
+.pets-page li a:hover {
+  color: var(--color-dark-xxl);
+  transition: all 0.5s ease-in-out;
+}
+.pets-page h1:hover {
+  color: var(--color-dark-xxl);
+  transition: all 0.5s ease-in-out;
+}
+.pets-page h6 {
+  color: var(--color-dark-xxl);
+  font-family: var(--font-family-h6-p-ul);
+  font-weight: var(--font-weight);
+  font-size: var(--font-size-h6);
+  line-height: 14.95px;
+  padding: 10px 5px;
+  margin: 0;
+  letter-spacing: 0.09em;
+}
+.pets-page .active {
+  height: 27px;
+  cursor: default;
+  color: var(--color-dark-xxl);
+  border-bottom: solid 3px #f1cdb3;
+  box-sizing: border-box;
+}
+.burger-line.dark {
+  background-color: var(--color-dark-3xl);
+}
+@media screen and (max-width: 779.9px) {
   .header {
     padding: 30px;
     gap: 0;
@@ -106,10 +145,19 @@ body.menu-open {
     max-height: 1165px;
     margin: 0 auto;
   }
+  .pets-page {
+    padding: 30px -1px;
+  }
 }
 @media screen and (max-width: 767.9px) {
   nav {
     display: none;
+  }
+  .pets-page .active {
+    color: var(--color-light-s);
+  }
+  .burger-line.dark + .burger-menu.open {
+    background-color: var(--color-primary);
   }
   .nav-links {
     display: flex;
@@ -118,12 +166,19 @@ body.menu-open {
     gap: 40px;
     padding-top: 158px;
   }
+  .nav-links a {
+    color: var(--color-dark-s);
+  }
   .nav-links a,
   .active {
     font-size: var(--font-size-h1);
   }
+  .active {
+    color: var(--color-light-s);
+  }
   .burger-line {
     display: flex;
+    background-color: var(--color-primary);
   }
   .burger-menu {
     z-index: 3;
@@ -131,6 +186,7 @@ body.menu-open {
     align-items: center;
     cursor: pointer;
   }
+
   .adaptive {
     position: fixed;
     top: 0;
@@ -168,7 +224,6 @@ body.menu-open {
     background: rgba(0, 0, 0, 0.5);
     z-index: 1;
   }
-
   .overlay.show {
     display: block;
     opacity: 1;
@@ -185,12 +240,5 @@ body.menu-open {
   }
   nav {
     display: none;
-  }
-  .burger {
-    background: url(../img/Burger.svg);
-    height: 22px;
-    width: 30px;
-    margin: auto 0;
-    display: flex;
   }
 }

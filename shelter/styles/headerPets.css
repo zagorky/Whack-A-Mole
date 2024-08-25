@@ -3,7 +3,7 @@
   width: 100vw;
   margin: 0 auto;
 }
-.header-pets-page {
+.pets-page {
   padding: 30px 40px;
   display: grid;
   height: 60px;
@@ -37,11 +37,11 @@ h6 {
   letter-spacing: 0.09em;
 }
 
-.header-pets-page nav {
+.pets-page nav {
   display: grid;
   justify-content: end;
 }
-.header-pets-page ul {
+.pets-page ul {
   font-family: var(--font-family-h6-p-ul);
   font-size: var(--font-size-p-ul);
   font-weight: var(--font-weight);
@@ -51,10 +51,10 @@ h6 {
   grid-template-columns: 114px 58px 106px 60px;
   gap: 35px;
 }
-.header-pets-page li a {
+.pets-page li a {
   color: var(--color-dark-l);
 }
-.header-pets-page li a:hover {
+.pets-page li a:hover {
   color: var(--color-dark-xxl);
   transition: all 0.5s ease-in-out;
 }
@@ -68,11 +68,9 @@ h6 {
 .burger {
   display: none;
 }
-@media screen and (max-width: 1270px) {
-}
 
 @media screen and (max-width: 780px) {
-  .header-pets-page {
+  .pets-page {
     padding: 30px 30px;
   }
   .burger {
@@ -86,10 +84,10 @@ h6 {
     margin: auto 0;
     display: flex;
   }
-  .header-pets-page ul {
+  .pets-page ul {
     display: none;
   }
-  .header-pets-page {
+  .pets-page {
     display: flex;
     justify-content: space-between;
     gap: 66px;
@@ -98,7 +96,7 @@ h6 {
   }
 }
 @media screen and (max-width: 400px) {
-  .header-pets-page {
+  .pets-page {
     gap: 10px;
     padding: 30px 21px;
   }
