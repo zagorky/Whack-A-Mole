@@ -1,3 +1,6 @@
+import { petsData } from "./data/pets.js";
+console.log(petsData);
+
 // бургер-меню
 
 document.addEventListener("DOMContentLoaded", function () {
