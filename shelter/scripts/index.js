@@ -48,33 +48,12 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-//пагинация
-const arrowRight = document.querySelector(".right");
-const arrowLeft = document.querySelector(".left");
-
-const replaceCard = (way) => {
-  if (way == "left") {
-  } else {
-  }
-};
-
-// const handleClick = (event, way) => {
-//   const elem = event.target;
-//   replaceCard(way);
-// };
-
-// arrowLeft.addEventListener("click", handleClick);
-// arrowRight.addEventListener("click", handleClick);
-
 // слайдер
-
-// const cards = document.querySelectorAll(".card");
-// cards.forEach((card) => {});
 
 let petsData = [];
 let currentSlide = 0;
 let previousSlide = [];
-let currentCard = 0;
+let currentCards = 0;
 
 //получение данных
 fetch("./data/pets.json")
@@ -84,7 +63,10 @@ fetch("./data/pets.json")
     }
     return response.json();
   })
-  .then((jsonData) => (petsData = jsonData))
+  .then((jsonData) => {
+    petsData = jsonData;
+    slider();
+  })
   .catch((error) => console.error("Ошибка при исполнении запроса: ", error));
 
 //генерация карточек
@@ -98,12 +80,75 @@ const createCard = (data) => {
   `;
   return card;
 };
+//генерация слайдов
+const cardsContainer = document.querySelector(".cards");
 
-const slider = (data) => {
+const createSlide = () => {
+  cardsContainer.innerHTML = "";
+  let slide = [];
+  let availablePets = petsData.filter((pet) => !previousSlide.includes(pet));
+  while (slide.length < currentCards) {
+    let randomCards = Math.floor(Math.random() * availablePets.length);
+    let selectedPets = availablePets.splice(randomCards, 1)[0];
+    slide.push(selectedPets);
+  }
+  slide.forEach((pet) => {
+    cardsContainer.appendChild(createCard(pet));
+  });
+  previousSlide = slide;
+};
+
+// адаптивность слайдера
+const updateSliderSize = () => {
   if (window.screen.width >= 1280) {
+    currentCards = 3;
   } else if (window.screen.width >= 768) {
+    currentCards = 2;
   } else if (window.screen.width >= 320) {
+    currentCards = 1;
   }
 };
 
+window.addEventListener("resize", () => {
+  updateSliderSize(), createSlide();
+});
+
+//функция слайдера
+const slider = () => {
+  updateSliderSize();
+  createSlide();
+};
+
+//переходы
+
+const slideLeft = () => {
+  currentSlide--;
+  if (currentSlide < 0) {
+    currentSlide = petsData.length - 1;
+  }
+  sliderAnimation("left");
+};
+
+const slideRight = () => {
+  currentSlide++;
+  if (currentSlide >= petsData.length) {
+    currentSlide = 0;
+  }
+  sliderAnimation("right");
+};
+
+//события на стрелках
+const arrowRight = document.querySelector(".right");
+const arrowLeft = document.querySelector(".left");
+
+arrowLeft.addEventListener("click", slideLeft);
+arrowRight.addEventListener("click", slideRight);
+
+const sliderAnimation = (direction) => {
+  cardsContainer.classList.add(`slide-${direction}`);
+  setTimeout(() => {
+    createSlide();
+    cardsContainer.classList.remove(`slide-${direction}`);
+  }, 500);
+};
 // попап
