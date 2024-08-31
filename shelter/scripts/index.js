@@ -8,8 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const header = document.getElementById("header");
   const wrapperPets = document.getElementById("wrapper-header");
   const burgerIcon = document.querySelectorAll(".burger-line");
-  let url = window.location.href;
-  const links = document.querySelectorAll(".link");
+  let isPetsPage = window.location.href.includes("pets.html");
 
   //переключение бургера при нажатии
 
@@ -21,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
     navLinks.forEach((elem) => {
       elem.classList.remove("pets-page");
     });
-    if (url.includes("pets.html")) {
+    if (isPetsPage) {
       burgerIcon.forEach((i) => {
         i.classList.toggle("dark");
       });
@@ -37,10 +36,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   //при переходе на страницу pets
 
-  if (url.includes("pets.html")) {
+  if (isPetsPage) {
     wrapperPets.classList.toggle("pets-page");
     header.classList.toggle("pets-page");
-    if (url.includes("pets.html")) {
+    if (isPetsPage) {
       burgerIcon.forEach((i) => {
         i.classList.toggle("dark");
       });
@@ -74,12 +73,13 @@ const createCard = (data) => {
   const card = document.createElement("div");
   card.classList.add("card");
   card.innerHTML = `
-                  <img src="${data.img}" alt="our-friends-pic" />
+                <img src="${data.img}" alt="our-friends-pic" />
                 <p>${data.name}</p>
                 <button>Learn more</button>
   `;
   return card;
 };
+
 //генерация слайдов
 const cardsContainer = document.querySelector(".cards");
 
@@ -95,18 +95,14 @@ const createSlide = () => {
   slide.forEach((pet) => {
     cardsContainer.appendChild(createCard(pet));
   });
-  previousSlide = slide;
+  previousSlide.length = 0;
+  previousSlide.push(...slide);
 };
 
 // адаптивность слайдера
 const updateSliderSize = () => {
-  if (window.screen.width >= 1280) {
-    currentCards = 3;
-  } else if (window.screen.width >= 768) {
-    currentCards = 2;
-  } else if (window.screen.width >= 320) {
-    currentCards = 1;
-  }
+  currentCards =
+    window.screen.width >= 1280 ? 3 : window.screen.width >= 768 ? 2 : 1;
 };
 
 window.addEventListener("resize", () => {
@@ -117,9 +113,20 @@ window.addEventListener("resize", () => {
 const slider = () => {
   updateSliderSize();
   createSlide();
+  window.addEventListener("resize", () => {
+    updateSliderSize(), createSlide();
+  });
 };
 
 //переходы
+
+const sliderAnimation = (direction) => {
+  cardsContainer.classList.add(`slide-${direction}`);
+  setTimeout(() => {
+    createSlide();
+    cardsContainer.classList.remove(`slide-${direction}`);
+  }, 500);
+};
 
 const slideLeft = () => {
   currentSlide--;
@@ -144,11 +151,4 @@ const arrowLeft = document.querySelector(".left");
 arrowLeft.addEventListener("click", slideLeft);
 arrowRight.addEventListener("click", slideRight);
 
-const sliderAnimation = (direction) => {
-  cardsContainer.classList.add(`slide-${direction}`);
-  setTimeout(() => {
-    createSlide();
-    cardsContainer.classList.remove(`slide-${direction}`);
-  }, 500);
-};
 // попап

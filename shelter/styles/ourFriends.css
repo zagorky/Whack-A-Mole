@@ -1,7 +1,3 @@
-.slider {
-  overflow: hidden;
-}
-
 #pets {
   background-color: var(--color-light-l);
 }
@@ -84,12 +80,23 @@
   text-align: center;
   justify-content: space-between;
   gap: 53px;
+  position: relative;
+  overflow: hidden;
+}
+.slide-left {
+  opacity: 0;
+}
+
+.slide-right {
+  opacity: 0;
 }
 .cards {
   display: flex;
   justify-content: space-between;
   gap: 90px;
   padding: auto;
+  transition: opacity 0.5s ease-in-out;
+  will-change: opacity;
 }
 .container-cards button {
   border: 2px solid #f1cdb3;
@@ -129,6 +136,11 @@
   background: var(--color-primary-light);
   border-color: var(--color-primary-light);
   transition: all 0.5s ease-in-out;
+}
+
+.card.transitions {
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
 
 @media screen and (max-width: 1200px) {
