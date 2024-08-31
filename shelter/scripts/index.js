@@ -48,129 +48,107 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-//пагинация
+// слайдер
+
+let petsData = [];
+let currentSlide = 0;
+let previousSlide = [];
+let currentCards = 0;
+
+//получение данных
+fetch("./data/pets.json")
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error("Ошибка " + response.statusText);
+    }
+    return response.json();
+  })
+  .then((jsonData) => {
+    petsData = jsonData;
+    slider();
+  })
+  .catch((error) => console.error("Ошибка при исполнении запроса: ", error));
+
+//генерация карточек
+const createCard = (data) => {
+  const card = document.createElement("div");
+  card.classList.add("card");
+  card.innerHTML = `
+                  <img src="${data.img}" alt="our-friends-pic" />
+                <p>${data.name}</p>
+                <button>Learn more</button>
+  `;
+  return card;
+};
+//генерация слайдов
+const cardsContainer = document.querySelector(".cards");
+
+const createSlide = () => {
+  cardsContainer.innerHTML = "";
+  let slide = [];
+  let availablePets = petsData.filter((pet) => !previousSlide.includes(pet));
+  while (slide.length < currentCards) {
+    let randomCards = Math.floor(Math.random() * availablePets.length);
+    let selectedPets = availablePets.splice(randomCards, 1)[0];
+    slide.push(selectedPets);
+  }
+  slide.forEach((pet) => {
+    cardsContainer.appendChild(createCard(pet));
+  });
+  previousSlide = slide;
+};
+
+// адаптивность слайдера
+const updateSliderSize = () => {
+  if (window.screen.width >= 1280) {
+    currentCards = 3;
+  } else if (window.screen.width >= 768) {
+    currentCards = 2;
+  } else if (window.screen.width >= 320) {
+    currentCards = 1;
+  }
+};
+
+window.addEventListener("resize", () => {
+  updateSliderSize(), createSlide();
+});
+
+//функция слайдера
+const slider = () => {
+  updateSliderSize();
+  createSlide();
+};
+
+//переходы
+
+const slideLeft = () => {
+  currentSlide--;
+  if (currentSlide < 0) {
+    currentSlide = petsData.length - 1;
+  }
+  sliderAnimation("left");
+};
+
+const slideRight = () => {
+  currentSlide++;
+  if (currentSlide >= petsData.length) {
+    currentSlide = 0;
+  }
+  sliderAnimation("right");
+};
+
+//события на стрелках
 const arrowRight = document.querySelector(".right");
 const arrowLeft = document.querySelector(".left");
 
-const replaceCard = (way) => {
-  if (way == "left") {
-  } else {
-  }
+arrowLeft.addEventListener("click", slideLeft);
+arrowRight.addEventListener("click", slideRight);
+
+const sliderAnimation = (direction) => {
+  cardsContainer.classList.add(`slide-${direction}`);
+  setTimeout(() => {
+    createSlide();
+    cardsContainer.classList.remove(`slide-${direction}`);
+  }, 500);
 };
-
-const handleClick = (event, way) => {
-  const elem = event.target;
-  replaceCard(way);
-};
-
-arrowLeft.addEventListener("click", handleClick);
-arrowRight.addEventListener("click", handleClick);
-
-// слайдер
-const petsData = [
-  {
-    name: "Jennifer",
-    img: "./img/pets-jennifer.png",
-    type: "Dog",
-    breed: "Labrador",
-    description:
-      "Jennifer is a sweet 2 months old Labrador that is patiently waiting to find a new forever home. This girl really enjoys being able to go outside to run and play, but won't hesitate to play up a storm in the house if she has all of her favorite toys.",
-    age: "2 months",
-    inoculations: ["none"],
-    diseases: ["none"],
-    parasites: ["none"],
-  },
-  {
-    name: "Sophia",
-    img: "./img/pets-katrine1.png",
-    type: "Dog",
-    breed: "Shih tzu",
-    description:
-      "Sophia here and I'm looking for my forever home to live out the best years of my life. I am full of energy. Everyday I'm learning new things, like how to walk on a leash, go potty outside, bark and play with toys and I still need some practice.",
-    age: "1 month",
-    inoculations: ["parvovirus"],
-    diseases: ["none"],
-    parasites: ["none"],
-  },
-  {
-    name: "Woody",
-    img: "./img/pets-woody.png",
-    type: "Dog",
-    breed: "Golden Retriever",
-    description:
-      "Woody is a handsome 3 1/2 year old boy. Woody does know basic commands and is a smart pup. Since he is on the stronger side, he will learn a lot from your training. Woody will be happier when he finds a new family that can spend a lot of time with him.",
-    age: "3 years 6 months",
-    inoculations: ["adenovirus", "distemper"],
-    diseases: ["right back leg mobility reduced"],
-    parasites: ["none"],
-  },
-  {
-    name: "Scarlett",
-    img: "./img/pets-scarlet.png",
-    type: "Dog",
-    breed: "Jack Russell Terrier",
-    description:
-      "Scarlett is a happy, playful girl who will make you laugh and smile. She forms a bond quickly and will make a loyal companion and a wonderful family dog or a good companion for a single individual too since she likes to hang out and be with her human.",
-    age: "3 months",
-    inoculations: ["parainfluenza"],
-    diseases: ["none"],
-    parasites: ["none"],
-  },
-  {
-    name: "Katrine",
-    img: "./img/pets-katrine.png",
-    type: "Cat",
-    breed: "British Shorthair",
-    description:
-      "Katrine is a beautiful girl. She is as soft as the finest velvet with a thick lush fur. Will love you until the last breath she takes as long as you are the one. She is picky about her affection. She loves cuddles and to stretch into your hands for a deeper relaxations.",
-    age: "6 months",
-    inoculations: ["panleukopenia"],
-    diseases: ["none"],
-    parasites: ["none"],
-  },
-  {
-    name: "Timmy",
-    img: "./img/pets-timmy.png",
-    type: "Cat",
-    breed: "British Shorthair",
-    description:
-      "Timmy is an adorable grey british shorthair male. He loves to play and snuggle. He is neutered and up to date on age appropriate vaccinations. He can be chatty and enjoys being held. Timmy has a lot to say and wants a person to share his thoughts with.",
-    age: "2 years 3 months",
-    inoculations: ["calicivirus", "viral rhinotracheitis"],
-    diseases: ["kidney stones"],
-    parasites: ["none"],
-  },
-  {
-    name: "Freddie",
-    img: "./img/pets-katrine2.png",
-    type: "Cat",
-    breed: "British Shorthair",
-    description:
-      "Freddie is a little shy at first, but very sweet when he warms up. He likes playing with shoe strings and bottle caps. He is quick to learn the rhythms of his human’s daily life. Freddie has bounced around a lot in his life, and is looking to find his forever home.",
-    age: "2 months",
-    inoculations: ["rabies"],
-    diseases: ["none"],
-    parasites: ["none"],
-  },
-  {
-    name: "Charly",
-    img: "./img/pets-charley.png",
-    type: "Dog",
-    breed: "Jack Russell Terrier",
-    description:
-      "This cute boy, Charly, is three years old and he likes adults and kids. He isn’t fond of many other dogs, so he might do best in a single dog home. Charly has lots of energy, and loves to run and play. We think a fenced yard would make him very happy.",
-    age: "8 years",
-    inoculations: ["bordetella bronchiseptica", "leptospirosis"],
-    diseases: ["deafness", "blindness"],
-    parasites: ["lice", "fleas"],
-  },
-];
-
-const slider = (data) => {
-  if (window.screen.width >= 1280) {
-  } else if (window.screen.width >= 768) {
-  } else if (window.screen.width >= 320) {
-  }
-};
-
 // попап
