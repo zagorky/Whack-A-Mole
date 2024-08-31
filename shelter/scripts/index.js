@@ -11,33 +11,38 @@ document.addEventListener("DOMContentLoaded", function () {
   let url = window.location.href;
   const links = document.querySelectorAll(".link");
 
+  //переключение бургера при нажатии
+
   const toggleMenu = () => {
     burgerMenu.classList.toggle("open");
     adaptive.classList.toggle("open");
     overlay.classList.toggle("show");
     document.body.classList.toggle("menu-open");
-    // if (adaptive.classList.contains("open")) {
-    //   links.forEach((elem) => {
-    //     elem.classList.remove("dark");
-    //   });
-    // }
+    navLinks.forEach((elem) => {
+      elem.classList.remove("pets-page");
+    });
+    if (url.includes("pets.html")) {
+      burgerIcon.forEach((i) => {
+        i.classList.toggle("dark");
+      });
+    }
   };
 
+  //события
   burgerMenu.addEventListener("click", toggleMenu);
   overlay.addEventListener("click", toggleMenu);
   navLinks.forEach((link) => {
     link.addEventListener("click", toggleMenu);
   });
 
+  //при переходе на страницу pets
+
   if (url.includes("pets.html")) {
     wrapperPets.classList.toggle("pets-page");
     header.classList.toggle("pets-page");
-    burgerIcon.forEach((i) => {
-      i.classList.toggle("dark");
-    });
-    if (burgerMenu.classList.contains("open")) {
-      burgerIcon.forEach((elem) => {
-        elem.classList.remove("dark");
+    if (url.includes("pets.html")) {
+      burgerIcon.forEach((i) => {
+        i.classList.toggle("dark");
       });
     }
   }

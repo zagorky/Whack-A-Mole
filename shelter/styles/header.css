@@ -46,18 +46,18 @@
 }
 header h1 a {
   color: var(--color-primary);
+  transition: all 0.5s ease-in-out;
 }
 header h1 a:hover {
-  color: var(--color-primary-light);
-  transition: all 0.5s ease-in-out;
+  font-size: 35px;
 }
 .nav-links a {
   color: var(--color-dark-s);
   height: 27px;
+  transition: font-size 0.5s ease-in-out;
 }
 .nav-links a:hover {
-  color: var(--color-light-s);
-  transition: all 0.5s ease-in-out;
+  font-size: 14px;
 }
 .active {
   cursor: default;
@@ -103,17 +103,16 @@ body.menu-open {
 }
 .pets-page a {
   color: var(--color-dark-l);
+  transition: font-size 0.5s ease-in-out;
 }
 .pets-page h1 a {
   color: var(--color-dark-l);
 }
-.pets-page li a:hover {
-  color: var(--color-dark-xxl);
-  transition: all 0.5s ease-in-out;
-}
+
 .pets-page h1:hover {
-  color: var(--color-dark-xxl);
+  /* color: var(--color-dark-xxl); */
   transition: all 0.5s ease-in-out;
+  font-size: 35px;
 }
 .pets-page h6 {
   color: var(--color-dark-xxl);
@@ -134,6 +133,7 @@ body.menu-open {
 }
 .burger-line.dark {
   background-color: var(--color-dark-3xl);
+  transition: background-color 0.5s cubic-bezier(0, 0, 0.98, 0.39);
 }
 .adaptive.open.light {
   background-color: var(--color-dark-s);
