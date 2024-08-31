@@ -46,18 +46,18 @@
 }
 header h1 a {
   color: var(--color-primary);
-  transition: all 0.5s ease-in-out;
+  transition: text-shadow 0.5s ease-in-out;
 }
 header h1 a:hover {
-  font-size: 35px;
+  text-shadow: rgb(173, 172, 167) 1px 0 10px;
 }
 .nav-links a {
   color: var(--color-dark-s);
   height: 27px;
-  transition: font-size 0.5s ease-in-out;
+  transition: text-shabow 0.5s ease-in-out;
 }
 .nav-links a:hover {
-  font-size: 14px;
+  text-shadow: rgb(173, 172, 167) 1px 0 10px;
 }
 .active {
   cursor: default;
@@ -103,17 +103,11 @@ body.menu-open {
 }
 .pets-page a {
   color: var(--color-dark-l);
-  transition: font-size 0.5s ease-in-out;
 }
 .pets-page h1 a {
   color: var(--color-dark-l);
 }
 
-.pets-page h1:hover {
-  /* color: var(--color-dark-xxl); */
-  transition: all 0.5s ease-in-out;
-  font-size: 35px;
-}
 .pets-page h6 {
   color: var(--color-dark-xxl);
   font-family: var(--font-family-h6-p-ul);
