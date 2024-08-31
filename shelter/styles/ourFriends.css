@@ -1,3 +1,7 @@
+.slider {
+  overflow: hidden;
+}
+
 #pets {
   background-color: var(--color-light-l);
 }
