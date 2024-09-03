@@ -78,13 +78,7 @@ svg:hover {
   justify-content: space-between;
   overflow: hidden;
 }
-/* .slide-left {
-  opacity: 0;
-}
 
-.slide-right {
-  opacity: 0;
-} */
 .cards {
   display: flex;
   justify-content: space-between;
@@ -199,7 +193,7 @@ svg {
     margin-left: auto;
   }
   .button-pets2 {
-    margin-top: 100px;
+    margin-top: 30px;
   }
 }
 @media screen and (max-width: 320px) {
