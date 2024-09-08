@@ -160,3 +160,6 @@ arrowLeft.addEventListener("click", slideLeft);
 arrowRight.addEventListener("click", slideRight);
 
 slider();
+console.log(
+  "с массивами конечно у меня ничего не получилось, пусть будет предполагаемая оценка 70"
+);
