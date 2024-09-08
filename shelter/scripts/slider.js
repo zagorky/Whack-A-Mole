@@ -20,19 +20,19 @@ fetch("./data/pets.json")
   .catch((error) => console.error("Ошибка при исполнении запроса: ", error));
 
 //генерация карточек
-const createCard = (data) => {
+const createCard = (pet) => {
   const card = document.createElement("div");
   card.classList.add("card");
   card.innerHTML = `
-                <img src="${data.img}" alt="our-friends-pic" />
-                <p>${data.name}</p>
+                <img src="${pet.img}" alt="our-friends-pic" />
+                <p>${pet.name}</p>
                 <button>Learn more</button>
   `;
   const popupContainer = document.createElement("div");
   popupContainer.classList.add("popup-cont", "hidden");
   popupContainer.innerHTML = `
-      <div class="close-popup">
-  <svg
+      <div class="popup-container">
+  <svg class="close-popup"
     width="52"
     height="52"
     viewBox="0 0 52 52"
@@ -55,20 +55,20 @@ const createCard = (data) => {
       fill="#292929"
     />
   </svg>
-</div>
 <div class="popup-content">
-  <img src="${data.img}" alt="our-friends-pic" />
+  <img src="${pet.img}" alt="our-friends-pic" />
   <div class="popup-text">
-    <h3>${data.name}</h3>
-    <h4>${data.type} - ${data.breed}</h4>
-    <p>${data.description}</p>
+    <h3>${pet.name}</h3>
+    <h4>${pet.type} - ${pet.breed}</h4>
+    <p>${pet.description}</p>
     <ul>
-      <li><b>Age:</b>${data.age}</li>
-      <li><b>Inoculations:</b>${data.inoculations}</li>
-      <li><b>Diseases:</b>${data.diseases}</li>
-      <li><b>Parasites:</b>${data.parasites}</li>
+      <li><b>Age:</b>${pet.age}</li>
+      <li><b>Inoculations:</b>${pet.inoculations}</li>
+      <li><b>Diseases:</b>${pet.diseases}</li>
+      <li><b>Parasites:</b>${pet.parasites}</li>
     </ul>
   </div>
+</div>
 </div>
 `;
   document.body.appendChild(popupContainer);
@@ -76,7 +76,6 @@ const createCard = (data) => {
     popupContainer.classList.toggle("hidden");
     document.body.classList.toggle("no-scroll");
   });
-
   popupContainer.addEventListener("click", (event) => {
     if (
       event.target.classList.contains("popup-cont") ||
@@ -113,10 +112,6 @@ const updateSliderSize = () => {
   currentCards =
     window.screen.width >= 1280 ? 3 : window.screen.width >= 768 ? 2 : 1;
 };
-
-window.addEventListener("resize", () => {
-  updateSliderSize(), createSlide();
-});
 
 //функция слайдера
 const slider = () => {
