@@ -19,25 +19,30 @@ fetch("./data/pets.json")
     return response.json();
   })
   .then((jsonData) => {
+    petsData = jsonData;
     jsonData.forEach((pet) => {
-      for (let i = 0; i < 6; i++) {
+      for (let i = 0; i < 5; i++) {
         petsData.push({ ...pet });
       }
     });
-    shuffleData();
+    function shuffle(arr) {
+      return arr.sort(() => Math.random() - 0.5);
+    }
+
+    function shuffleData(petsData) {
+      let newData = [];
+      for (let i = 0; i < petsData.length; i += 8) {
+        let chunk = petsData.slice(i, i + 8);
+        newData.push(...shuffle(chunk));
+      }
+      return newData;
+    }
+    shuffledData = shuffleData(petsData);
+    console.log(shuffledData);
     updatePetsPetPage();
     renderCards();
   })
   .catch((error) => console.error("Ошибка при исполнении запроса: ", error));
-
-function shuffleData() {
-  let tempData = [...petsData];
-  for (let i = tempData.length - 1; i > 0; i--) {
-    const x = Math.floor(Math.random() * (i + 1));
-    [tempData[i], tempData[x]] = [tempData[x], tempData[i]];
-  }
-  shuffledData = tempData;
-}
 
 function renderCards() {
   const start = (currentPage - 1) * petsPerPage;
