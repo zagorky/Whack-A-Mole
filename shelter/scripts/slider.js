@@ -82,7 +82,7 @@ const createCard = (pet) => {
       event.target.classList.contains("close-popup")
     ) {
       popupContainer.classList.toggle("hidden");
-      document.body.classList.remove("no-scroll");
+      document.body.classList.toggle("no-scroll");
     }
   });
   return card;
@@ -100,6 +100,7 @@ const createSlide = () => {
     let selectedPets = availablePets.splice(randomCards, 1)[0];
     slide.push(selectedPets);
   }
+
   slide.forEach((pet) => {
     cardsContainer.appendChild(createCard(pet));
   });
