@@ -128,12 +128,14 @@ const sliderAnimation = (direction) => {
   cardsContainer.classList.add(`slide-${direction}`);
   setTimeout(() => {
     createSlide();
+    cardsContainer.style.opacity = 100;
     cardsContainer.classList.remove(`slide-${direction}`);
   }, 500);
 };
 
 const slideLeft = () => {
   currentSlide--;
+  cardsContainer.style.opacity = 0;
   if (currentSlide < 0) {
     currentSlide = petsData.length - 1;
   }
@@ -142,6 +144,8 @@ const slideLeft = () => {
 
 const slideRight = () => {
   currentSlide++;
+  cardsContainer.style.opacity = 0;
+
   if (currentSlide >= petsData.length) {
     currentSlide = 0;
   }
