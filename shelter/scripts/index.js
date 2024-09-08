@@ -171,3 +171,7 @@ window.addEventListener("resize", () => {
 });
 
 updatePetsPetPage();
+
+console.log(
+  "с массивами конечно у меня ничего не получилось, пусть будет предполагаемая оценка 70"
+);
