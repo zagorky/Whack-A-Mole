@@ -1,6 +1,6 @@
 ## js30#1.3-custom-video
 
-Deploy:
+Deploy:https://rolling-scopes-school.github.io/zagorky-JSFEPRESCHOOL2024Q2/js30custom-video
 
 ## Описание проекта
 
