@@ -1,0 +1,43 @@
+// переменные
+$textColor: #e2e2e2;
+$color1: #ff8bb6;
+$color2: #ffcf7d;
+$color3: #340f15;
+$color4: #7d7576;
+$fontFamily: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+  "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+
+// основные стили
+* {
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  margin: 0;
+  font-family: $fontFamily;
+  background-color: $color4;
+  color: $textColor;
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  width: 100vw;
+  height: 100vw;
+}
+.player {
+  width: 50%;
+  height: auto;
+  margin: auto;
+  .play,
+  .pause {
+    width: 52px;
+    height: 52px;
+  }
+}
+// .play,
+// .pause {
+//   width: 52px;
+//   height: 52px;
+// }
