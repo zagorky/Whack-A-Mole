@@ -1,0 +1,51 @@
+/* переменные */
+:root {
+  --textColor: #e2e2e2;
+  --color1: #ff8bb6;
+  --color2: #ffcf7d;
+  --color3: #340f15;
+  --color4: #7d7576;
+  --fontFamily: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+/* основные стили */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  font-family: var(--fontFamily);
+  background-color: var(--color3);
+  color: var(--textColor);
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  width: 100vw;
+  height: 100vh;
+}
+
+.player {
+  width: 50%;
+  margin: 0 auto;
+}
+.video {
+  width: 100%;
+}
+.btn {
+  width: 52px;
+  height: 52px;
+}
+.play {
+  background: url(../assets/svg/play.svg);
+  background-repeat: no-repeat;
+}
+.pause {
+  background: url(../assets/svg/pause.svg);
+  background-repeat: no-repeat;
+}

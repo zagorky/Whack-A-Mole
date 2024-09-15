@@ -2,18 +2,23 @@ console.log("самопроверка");
 
 //
 
-const video = new Video();
-const play = document.querySelector(".play");
-const pause = document.querySelector(".pause");
+const video = document.querySelector("video");
+const btn = document.querySelector(".btn");
+let isPlay = false;
 
 function playVideo() {
-  video.src =
-    "https://github.com/rolling-scopes-school/zagorky-JSFEPRESCHOOL2024Q2/blob/js30%231.3-custom-video/js30custom-video/assets/video/video.mp4";
+  if (!isPlay) {
+    video.play();
+    btn.classList.toggle("pause");
+    btn.classList.toggle("play");
+    isPlay = true;
+  } else {
+    video.pause();
+    btn.classList.toggle("pause");
+    btn.classList.toggle("play");
+    isPlay = false;
+  }
   video.currentTime = 0;
-  video.play();
 }
-function pauseVideo() {
-  video.pause();
-}
-play.addEventListener("click", playVideo);
-pause.addEventListener("click", pauseVideo);
+
+btn.addEventListener("click", playVideo);
