@@ -82,6 +82,10 @@ h1 {
   background: url(../assets/svg/mute.svg);
   background-repeat: no-repeat;
 }
+.off {
+  background: url(../assets/svg/off.svg);
+  background-repeat: no-repeat;
+}
 .control {
   display: flex;
   justify-content: space-between;
