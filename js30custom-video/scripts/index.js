@@ -9,9 +9,6 @@ const video = player.querySelector("video");
 // constrols
 const playPauseBtn = player.querySelector(".btn"); //кнопка play/pause
 const volume = player.querySelector(".volume"); // интуп с громкостью
-const playbackRate = player.querySelector(".playbackRate"); //инпут
-const skipBtns = player.querySelectorAll(".btn[data-skip]"); //кнопки перемотки
-const fullscreenBtn = player.querySelector(".fullscreen");
 const progressCont = player.querySelector(".progress");
 const progressBar = player.querySelector(".progress-filled");
 
@@ -43,23 +40,7 @@ function updateVolume() {
   let volume = this.value;
   video.volume = volume;
 }
-function updateRate() {
-  let rate = this.value;
-  video.playbackRate = rate;
-}
-function doFullscreen() {
-  console.dir(video);
-  if (video.webkitSupportsFullscreen) video.webkitEnterFullScreen();
-}
-function goForward() {
-  let value = Number(this.dataset.skip);
-  video.currentTime = video.currentTime + value;
-}
+
 playPauseBtn.addEventListener("click", playVideo);
 video.addEventListener("click", playVideo);
 volume.addEventListener("change", updateVolume);
-playbackRate.addEventListener("change", updateRate);
-fullscreenBtn.addEventListener("click", doFullscreen);
-skipBtns.forEach((el) => {
-  el.addEventListener("click", goForward);
-});

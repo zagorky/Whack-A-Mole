@@ -37,15 +37,7 @@ h1 {
   background-color: var(--color4);
   border-radius: 10px;
 }
-/* .player:fullscreen {
-  max-width: none;
-  width: 100%;
-}
 
-.player:-webkit-full-screen {
-  max-width: none;
-  width: 100%;
-} */
 .video {
   width: 100%;
   border-radius: 8px;
@@ -82,24 +74,13 @@ h1 {
   background: url(../assets/svg/pausepink.svg);
   background-repeat: no-repeat;
 }
-.playback {
-  background: url(../assets/svg/prev.svg);
-  background-repeat: no-repeat;
-}
-.playForward {
-  background: url(../assets/svg/next.svg);
-  background-repeat: no-repeat;
-}
-.fullscreen {
-  background: url(../assets/svg/fullscreenpink.svg);
-  background-repeat: no-repeat;
-}
+
 .control {
   display: flex;
   justify-content: space-between;
 }
 input[type="range"] {
-  width: 100px;
+  width: 70%;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -122,7 +103,7 @@ input[type="range"]::-webkit-slider-thumb {
   height: 20px;
   -webkit-appearance: none;
   margin-top: -4px;
-  box-shadow: -100px 0 0 100px #dccfcf;
+  box-shadow: -500px 0 0 500px #dccfcf;
 }
 
 input[type="range"]::-moz-range-track {
@@ -133,7 +114,7 @@ input[type="range"]::-moz-range-track {
 input[type="range"]::-moz-range-thumb {
   background: #ffb4be;
   cursor: pointer;
-  box-shadow: -100px 0px 0px 100px #dccfcf;
+  box-shadow: -500px 0px 0px 500px #dccfcf;
   padding: 0px;
   margin: 0px;
 }
