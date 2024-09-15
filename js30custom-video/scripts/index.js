@@ -35,7 +35,7 @@ function playVideo() {
 
 function updateProgress() {
   let prog = video.currentTime / video.duration;
-  progressBar.style.flexBasis = Math.floor.apply(prog * 1000) / 10 + "%";
+  progressBar.style.flexBasis = Math.floor(prog * 1000) / 10 + "%";
 } // пока не работает
 
 function updateVolume() {

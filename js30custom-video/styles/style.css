@@ -50,14 +50,14 @@ h1 {
   height: 5px;
   transition: height 0.3s;
   background: #f0eaea;
-  cursor: ew-resize;
+  cursor: pointer;
 }
 
 .progress-filled {
   width: 50%;
   background: #dccfcf;
   flex: 0;
-  flex-basis: 50%;
+  flex-basis: 0%;
 }
 .btn {
   width: 32px;
