@@ -3,30 +3,52 @@
 // );
 
 //
+const player = document.querySelector(".player");
+const video = player.querySelector("video");
 
-const video = document.querySelector("video");
-const btn = document.querySelector(".btn");
+// constrols
+const playPauseBtn = player.querySelector(".btn"); //кнопка play/pause
+const volume = player.querySelector(".volume"); // интуп с громкостью
+const playbackRate = player.querySelector(".playbackRate"); //инпут
+const skipBtns = player.querySelectorAll(".btn[date-skip]"); //кнопки перемотки
+const fullscreenBtn = player.querySelector(".fullscreen");
+const progressCont = player.querySelector(".progress");
+const progressBar = player.querySelector(".progress-filled");
+
 let isPlay = false;
+let progression;
 
 function playVideo() {
-  if (!isPlay) {
+  if (video.paused) {
+    playPauseBtn.classList.add("pause");
+    playPauseBtn.classList.remove("play");
+    progression = window.setInterval(updateProgress, 100);
     video.play();
-    toggleClass(btn, "play", "pause", isPlay);
-    isPlay = true;
-  } else {
+    updateProgress();
+  } else if (!video.paused) {
     video.pause();
-    toggleClass(btn, "play", "pause", isPlay);
-    isPlay = false;
-  }
-  video.currentTime = 0;
-}
-function toggleClass(elem, val1, val2, condition) {
-  if (!condition) {
-    elem.classList.toggle(val2);
-    elem.classList.toggle(val1);
-  } else {
-    elem.classList.toggle(val2);
-    elem.classList.toggle(val1);
+    playPauseBtn.classList.remove("pause");
+    playPauseBtn.classList.add("play");
+    clearInterval(progression);
+    updateProgress();
   }
 }
-btn.addEventListener("click", playVideo);
+
+function updateProgress() {
+  let prog = video.currentTime / video.duration;
+  progressBar.style.flexBasis = Math.floor.apply(prog * 1000) / 10 + "%";
+}
+
+function updateVolume() {
+  let volume = this.value;
+  video.volume = volume;
+}
+function updateRate() {
+  let rate = this.value;
+  video.playbackRate = rate;
+}
+
+playPauseBtn.addEventListener("click", playVideo);
+video.addEventListener("click", playVideo);
+volume.addEventListener("change", updateVolume);
+playbackRate.addEventListener("change", updateRate);

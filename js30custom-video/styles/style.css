@@ -35,7 +35,7 @@ body {
   width: 50%;
   margin: 0 auto;
   padding: 10px;
-  background-color: var(--color1);
+  background-color: var(--color2);
   border-radius: 10px;
 }
 .video {
@@ -43,28 +43,76 @@ body {
   border-radius: 8px;
 }
 .btn {
-  width: 52px;
-  height: 52px;
+  width: 32px;
+  height: 32px;
   border-radius: 10px;
+  border: none;
+  cursor: pointer;
 }
 .play {
   background: url(../assets/svg/play.svg);
+  background-repeat: no-repeat;
 }
 .pause {
   background: url(../assets/svg/pause.svg);
+  background-repeat: no-repeat;
 }
 .playback {
   background: url(../assets/svg/playback.svg);
+  background-repeat: no-repeat;
 }
 .playForward {
   background: url(../assets/svg/playforward.svg);
+  background-repeat: no-repeat;
 }
 .fullscreen {
   background: url(../assets/svg/fullscreen.svg);
+  background-repeat: no-repeat;
 }
 .control {
   display: flex;
   justify-content: space-between;
+}
+input[type="range"] {
+  width: 100px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  overflow: hidden;
+  margin: auto 15px;
+  height: 15px;
+  border: 2px solid var(--color3);
+  border-radius: 10px;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  background-color: var(--color2);
+  border-radius: 8px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  background: var(--color1);
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+  -webkit-appearance: none;
+  margin-top: -4px;
+  box-shadow: -100px 0 0 100px var(--color3);
+}
+
+input[type="range"]::-moz-range-track {
+  background-color: var(--color2);
+  border-radius: 8px;
+}
+
+input[type="range"]::-moz-range-thumb {
+  background: var(--color1);
+  cursor: pointer;
+  border-radius: 0px;
+  box-shadow: -100px 0px 0px 100px var(--color3);
+  padding: 0px;
+  margin: 0px;
 }
 footer {
   margin-top: 100px;
@@ -74,3 +122,14 @@ footer {
   justify-content: space-between;
   align-items: center;
 }
+
+.github,
+.course {
+  width: 52px;
+  height: 52px;
+  /* transform: color 0.5s ease; */
+}
+/* .github:hover,
+.course:hover {
+  color: #ff8bb6;
+} */
