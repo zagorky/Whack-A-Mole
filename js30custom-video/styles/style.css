@@ -25,6 +25,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   max-width: 100%;
   width: 100vw;
   height: 100vh;
@@ -33,19 +34,43 @@ body {
 .player {
   width: 50%;
   margin: 0 auto;
+  padding: 10px;
+  background-color: var(--color1);
+  border-radius: 10px;
 }
 .video {
   width: 100%;
+  border-radius: 8px;
 }
 .btn {
   width: 52px;
   height: 52px;
+  border-radius: 10px;
 }
 .play {
   background: url(../assets/svg/play.svg);
-  background-repeat: no-repeat;
 }
 .pause {
   background: url(../assets/svg/pause.svg);
-  background-repeat: no-repeat;
+}
+.playback {
+  background: url(../assets/svg/playback.svg);
+}
+.playForward {
+  background: url(../assets/svg/playforward.svg);
+}
+.fullscreen {
+  background: url(../assets/svg/fullscreen.svg);
+}
+.control {
+  display: flex;
+  justify-content: space-between;
+}
+footer {
+  margin-top: 100px;
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
