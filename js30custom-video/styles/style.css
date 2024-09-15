@@ -74,7 +74,14 @@ h1 {
   background: url(../assets/svg/pausepink.svg);
   background-repeat: no-repeat;
 }
-
+.sound {
+  background: url(../assets/svg/sound.svg);
+  background-repeat: no-repeat;
+}
+.mute {
+  background: url(../assets/svg/mute.svg);
+  background-repeat: no-repeat;
+}
 .control {
   display: flex;
   justify-content: space-between;

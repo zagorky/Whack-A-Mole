@@ -8,6 +8,7 @@ const video = player.querySelector("video");
 
 // constrols
 const playPauseBtn = player.querySelector(".btn"); //кнопка play/pause
+const soundMuteBtn = player.querySelector(".sound"); // кнопка включения выключения звука
 const volume = player.querySelector(".volume"); // интуп с громкостью
 const progressCont = player.querySelector(".progress");
 const progressBar = player.querySelector(".progress-filled");
@@ -40,7 +41,18 @@ function updateVolume() {
   let volume = this.value;
   video.volume = volume;
 }
-
+function handleMute() {
+  if (!video.muted) {
+    video.muted = true;
+    soundMuteBtn.classList.toggle("mute");
+    soundMuteBtn.classList.toggle("sound");
+  } else {
+    video.muted = false;
+    soundMuteBtn.classList.toggle("mute");
+    soundMuteBtn.classList.toggle("sound");
+  }
+}
+soundMuteBtn.addEventListener("click", handleMute);
 playPauseBtn.addEventListener("click", playVideo);
 video.addEventListener("click", playVideo);
 volume.addEventListener("change", updateVolume);
