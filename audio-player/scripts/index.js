@@ -2,7 +2,7 @@ import { audioData } from "../assets/data/data.js";
 
 const player = document.querySelector(".player");
 const audio = player.querySelector("audio");
-const playPauseBtn = player.querySelector(".btn"); //кнопка play/pause
+const playPauseBtn = player.querySelector(".play"); //кнопка play/pause
 const progressBar = document.querySelector(".progress-filled");
 const curTime = document.querySelector(".currentTime");
 const dur = document.querySelector(".duration");
