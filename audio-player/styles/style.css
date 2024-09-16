@@ -1,0 +1,81 @@
+:root {
+  --textColor: #e2e2e2;
+  --color1: #ff8bb6;
+  --color2: #ffcf7d;
+  --color3: #340f15;
+  --color4: #7d7576;
+  --fontFamily: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+/* основные стили */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: var(--fontFamily);
+  background-color: #5b5959b3;
+  color: var(--textColor);
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 100%;
+  height: 100vh;
+}
+h1 {
+  text-align: center;
+}
+.player {
+  height: 300pt;
+  width: 250pt;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: var(--color4);
+  border-radius: 10px;
+}
+.controls {
+  height: 50%;
+  width: 100%;
+  background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(58, 138, 149, 1) 100%
+  );
+}
+.progress {
+  margin: 10px auto;
+  display: flex;
+  flex-basis: 100%;
+  height: 5px;
+  transition: height 0.3s;
+  background: #f0eaea;
+  cursor: pointer;
+}
+.progress-filled {
+  width: 50%;
+  background: #dccfcf;
+  flex: 0;
+  flex-basis: 0%;
+}
+.btn {
+  width: 32px;
+  height: 32px;
+  border: none;
+  cursor: pointer;
+}
+.play {
+  background: url(../assets/img/audioplay.svg);
+}
+.pause {
+  background: url(../assets/img/audiopause.svg);
+}
+.next {
+  background: url(../assets/img/audionext.svg);
+}
+.prev {
+  background: url(../assets/img/audioprev.svg);
+}

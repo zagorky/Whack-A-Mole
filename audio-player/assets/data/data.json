@@ -1,0 +1,25 @@
+{
+  "tracks": [
+    {
+      "artist": "Amyl and the Sniffers",
+      "song": "Hertz",
+      "url": "audio-player/assets/audios/amylAndTheSniffets- Hertz.mp3",
+      "duration": "2:33",
+      "background": "audio-player/assets/img/hertz.webp"
+    },
+    {
+      "artist": "Weezer",
+      "song": "Jacked Up",
+      "url": "audio-player/assets/audios/wezeer-jackedUp.flac",
+      "duration": "2:53",
+      "background": "audio-player/assets/img/jackedUp.jpg"
+    },
+    {
+      "artist": "Валентин Дядька",
+      "song": "Киндер Буэно",
+      "url": "audio-player/assets/audios/valentinDadka-kinderBueno.mp3",
+      "duration": "3:12",
+      "background": "audio-player/assets/img/kinderBueno.jpg"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="shortcut icon"
+      href="./assets/img/headphones_i7j6f26ehhxh.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Audio Player</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="player">
+        <img src="" alt="" />
+        <audio src="./assets/audios/wezeer-jackedUp.flac"></audio>
+
+        <div class="controls">
+          <button class="btn play"></button>
+          <button class="btn prev" data-skip=""></button>
+          <button class="btn next" data-skip=""></button>
+          <div class="proress">
+            <div class="currentTime"></div>
+            <input type="range" class="progress-filled" />
+            <div class="duration"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>
