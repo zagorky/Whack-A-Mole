@@ -4,6 +4,8 @@ const player = document.querySelector(".player");
 const audio = player.querySelector("audio");
 const playPauseBtn = player.querySelector(".btn"); //кнопка play/pause
 const progressBar = document.querySelector(".progress-filled");
+const curTime = document.querySelector(".currentTime");
+const dur = document.querySelector(".duration");
 
 let progression;
 let currentTrack = 0;
@@ -15,7 +17,7 @@ function playAudio() {
   if (audio.paused) {
     playPauseBtn.classList.add("pause");
     playPauseBtn.classList.remove("play");
-    progression = window.setInterval(updateProgress, 100);
+    progression = window.setInterval(updateProgress, 1000);
     audio.play();
     updateProgress();
   } else {
@@ -29,6 +31,12 @@ function playAudio() {
 function updateProgress() {
   let prog = (audio.currentTime / audio.duration) * 100;
   progressBar.value = prog;
+  curTime.textContent = formatTime(audio.currentTime);
+  if (audio.ended) {
+    playPauseBtn.classList.remove("pause");
+    playPauseBtn.classList.add("play");
+    clearInterval(progression);
+  }
 }
 
 function getTrack(index) {
@@ -51,6 +59,21 @@ function prevTrack() {
   playAudio();
 }
 
+function formatTime(seconds) {
+  const min = Math.floor(seconds / 60);
+  const sec = Math.floor(seconds % 60);
+  return `${min}:${sec < 10 ? "0" + sec : sec}`;
+}
+
 playPauseBtn.addEventListener("click", playAudio);
 document.querySelector(".next").addEventListener("click", nextTrack);
 document.querySelector(".prev").addEventListener("click", prevTrack);
+audio.addEventListener("loadedmetadata", () => {
+  dur.textContent = formatTime(audio.duration);
+});
+audio.addEventListener("timeupdate", updateProgress);
+progressBar.addEventListener("input", () => {
+  const newCurTime = (progressBar.value / 100) * audio.duration;
+  audio.currentTime = newCurTime;
+  updateProgress();
+});

@@ -1,13 +1,8 @@
 :root {
   --textColor: #e2e2e2;
-  --color1: #ff8bb6;
-  --color2: #ffcf7d;
-  --color3: #340f15;
-  --color4: #7d7576;
   --fontFamily: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
-/* основные стили */
 * {
   box-sizing: border-box;
 }
@@ -35,7 +30,7 @@ h1 {
   display: flex;
   flex-direction: column;
   height: 300pt;
-  width: 250pt;
+  width: 230pt;
   margin: 0 auto;
   padding: 10px;
   border-radius: 10px;
@@ -52,26 +47,40 @@ h1 {
   width: 85%;
   margin: 0 auto;
   border-radius: 8px;
+  margin-bottom: 5px;
 }
-
+.artist,
+.song {
+  margin-bottom: 7px;
+}
 .controls {
   height: 50%;
   width: 100%;
 }
-.progress {
-  margin: 10px auto;
+.btn-bar {
   display: flex;
-  flex-basis: 100%;
-  height: 5px;
+  justify-content: space-around;
+  width: 100%;
+}
+.progress {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
   transition: height 0.3s;
-  background: #f0eaea;
   cursor: pointer;
 }
+.currentTime {
+  width: 10%;
+  height: auto;
+}
 .progress-filled {
-  width: 50%;
+  width: 60%;
   background: #dccfcf;
-  flex: 0;
-  flex-basis: 0%;
+}
+
+.duration {
+  width: 10%;
+  height: auto;
 }
 .btn {
   width: 32px;
@@ -92,14 +101,18 @@ h1 {
   background: url(../assets/img/audioprev.svg);
 }
 footer {
-  width: 20%;
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 .github,
 .course {
   width: 3em;
   height: 3em;
+  margin: 12px;
 }
