@@ -16,16 +16,17 @@
   <body>
     <div class="wrapper">
       <div class="player">
-        <img src="" alt="" />
-        <audio src="./assets/audios/wezeer-jackedUp.flac"></audio>
-
+        <img class="poster" src="" alt="" />
+        <audio src=""></audio>
+        <div class="artist"></div>
+        <div class="song"></div>
         <div class="controls">
-          <button class="btn play"></button>
-          <button class="btn prev" data-skip=""></button>
-          <button class="btn next" data-skip=""></button>
           <div class="proress">
+            <button class="btn play"></button>
+            <button class="btn prev"></button>
+            <button class="btn next"></button>
             <div class="currentTime"></div>
-            <input type="range" class="progress-filled" />
+            <input type="range" class="progress-filled" min="0" max="100" />
             <div class="duration"></div>
           </div>
         </div>
@@ -73,6 +74,7 @@
         ></a>
       </footer>
     </div>
-    <script src="./scripts/index.js"></script>
+    <script type="module" src="./assets/data/data.js"></script>
+    <script type="module" src="./scripts/index.js"></script>
   </body>
 </html>
