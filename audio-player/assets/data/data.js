@@ -20,4 +20,11 @@ export const audioData = [
     duration: "3:12",
     background: "./assets/img/kinderBueno.jpg",
   },
+  {
+    artist: "Makaya McCraven, Gil Scott-Heron",
+    song: "Me and the Devil",
+    src: "./assets/audios/makayaMcCracen-MeAndTheDevil.flac",
+    duration: "4:48",
+    background: "./assets/img/MeAndTheDevil.jpg",
+  },
 ];
