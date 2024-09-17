@@ -99,9 +99,9 @@ function handleMute() {
   }
 }
 function shuffleTracks() {
-  [];
+  let randomTrack = Math.floor(Math.random() * audioData.length);
+  return getTrack(randomTrack);
 }
-
 playPauseBtn.addEventListener("click", playAudio);
 document.querySelector(".next").addEventListener("click", nextTrack);
 document.querySelector(".prev").addEventListener("click", prevTrack);
@@ -116,3 +116,4 @@ progressBar.addEventListener("input", () => {
 });
 soundMuteBtn.addEventListener("click", handleMute);
 volume.addEventListener("change", updateVolume);
+shuffle.addEventListener("click", shuffleTracks);
