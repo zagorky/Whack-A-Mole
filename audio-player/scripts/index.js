@@ -100,7 +100,8 @@ function handleMute() {
 }
 function shuffleTracks() {
   let randomTrack = Math.floor(Math.random() * audioData.length);
-  return getTrack(randomTrack);
+  getTrack(randomTrack);
+  playAudio();
 }
 playPauseBtn.addEventListener("click", playAudio);
 document.querySelector(".next").addEventListener("click", nextTrack);
