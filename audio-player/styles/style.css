@@ -49,8 +49,11 @@ h1 {
   margin: 0 auto;
   border-radius: 8px;
   margin-bottom: 5px;
+  transition: width 0.5s ease-in-out;
 }
-
+.poster:hover {
+  width: 87%;
+}
 .controls {
   height: 50%;
   width: 100%;
@@ -60,6 +63,7 @@ h1 {
   justify-content: space-around;
   align-items: center;
   width: 100%;
+  position: relative;
 }
 .progress {
   margin: 0 auto;
@@ -111,10 +115,31 @@ h1 {
   width: 32px;
   height: 32px;
 }
-.volume {
+.sound {
   background: url(../assets/img/volume.svg);
   width: 32px;
   height: 32px;
+  position: relative;
+}
+.volume {
+  display: block;
+  position: absolute;
+  top: -100%;
+  left: 91%;
+  transform: translateX(-50%) rotate(270deg);
+  width: 100px;
+  height: 20px;
+  z-index: 10;
+  opacity: 0;
+}
+.sound:hover ~ .volume,
+.mute:hover ~ .volume {
+  display: block;
+  opacity: 1;
+}
+.volume:hover {
+  display: block;
+  opacity: 1;
 }
 .mute {
   background: url(../assets/img/mute.svg);
