@@ -22,21 +22,19 @@ function createImg(data) {
   image.alt = `${data.alt_description}`;
   content.append(image);
 }
-
-function infinityScroll() {
-  const windowHeight = window.innerHeight;
-  const documentHeight = document.documentElement.scrollHeight;
-  const scrollPos = window.scrollY;
-  if (documentHeight - (windowHeight + scrollPos) >= 100) {
-    if (searchingFor === "")
-      url = `https://api.unsplash.com/photos/random?query=&count=3&orientation=landscape&client_id=fg3V91GfUO8v970NVSOQw1IFhoi9XfHHoaTSN7sCZQE`;
-    getData();
-  } else {
-    url = `https://api.unsplash.com/photos/random?query=${searchingFor}&count=3&orientation=landscape&client_id=fg3V91GfUO8v970NVSOQw1IFhoi9XfHHoaTSN7sCZQE`;
-    getData();
-  }
-}
-
+// function infinityScroll() {
+//   const windowHeight = window.innerHeight;
+//   const documentHeight = document.documentElement.scrollHeight;
+//   const scrollPos = window.scrollY;
+//   if (documentHeight - (windowHeight + scrollPos) >= 100) {
+//     if (searchingFor === "")
+//       url = `https://api.unsplash.com/photos/random?query=&count=3&orientation=landscape&client_id=fg3V91GfUO8v970NVSOQw1IFhoi9XfHHoaTSN7sCZQE`;
+//     getData();
+//   } else {
+//     url = `https://api.unsplash.com/photos/random?query=${searchingFor}&count=3&orientation=landscape&client_id=fg3V91GfUO8v970NVSOQw1IFhoi9XfHHoaTSN7sCZQE`;
+//     getData();
+//   }
+// }
 function goSearching() {
   searchingFor = searchBox.value.trim().toString();
   url = `https://api.unsplash.com/photos/random?query=${searchingFor}&count=6&orientation=landscape&client_id=fg3V91GfUO8v970NVSOQw1IFhoi9XfHHoaTSN7sCZQE`;
@@ -44,14 +42,12 @@ function goSearching() {
   searchBox.value = searchingFor;
   getData();
 }
-
 function goClearing() {
   searchBox.value = "";
   url = `https://api.unsplash.com/photos/random?query=&count=6&orientation=landscape&client_id=fg3V91GfUO8v970NVSOQw1IFhoi9XfHHoaTSN7sCZQE`;
   content.innerHTML = "";
   getData();
 }
-
 function isClean() {
   if (searchBox.value !== "") {
     searchBtn.classList.remove("search");
@@ -71,7 +67,7 @@ function changeFunctionality(event) {
   }
 }
 
-document.addEventListener("scroll", infinityScroll);
+// document.addEventListener("scroll", infinityScroll);
 document.addEventListener("DOMContentLoaded", () => searchBox.focus());
 searchBtn.addEventListener("click", changeFunctionality);
 searchBox.addEventListener("input", isClean);
