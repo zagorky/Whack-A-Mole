@@ -3,15 +3,11 @@
 }
 
 body {
-  width: 100%;
-  height: 100%;
   margin: 0;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   color: #e2e2e2;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100% 100%;
+  background-color: #e2e2e2;
 }
 
 header {
@@ -19,8 +15,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  position: absolute;
-  top: 0;
+  border-bottom: 10px solid #eeacae;
   background-color: rgba(65, 72, 85, 0.879);
 }
 .search-box {
@@ -37,13 +32,31 @@ input[type="text"] {
 input[type="text"]:checked {
   border: none;
 }
+input:focus {
+  border: none;
+  outline: 0;
+}
 .search {
   width: 2em;
-  padding: 2px;
+  height: 2em;
   background-color: #e2e2e2;
   border: 3px solid #e2e2e2;
   cursor: pointer;
   border-radius: 10px;
+  background: url(../img/search.svg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.clear {
+  width: 2em;
+  height: 2em;
+  background-color: #e2e2e2;
+  border: 3px solid #e2e2e2;
+  cursor: pointer;
+  border-radius: 10px;
+  background: url(../img/clean1.svg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 }
 .search:active {
   background-color: #f4f2f2;
@@ -56,16 +69,17 @@ input[type="text"]:checked {
   justify-content: center;
   flex-direction: column;
   width: 100%;
-  height: 100dvh;
+  height: 100%;
 }
 .content {
+  width: 100%;
+  height: auto;
   display: grid;
   justify-content: center;
   align-items: center;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  max-width: 1280rem;
-  width: 100%;
+  margin: 20px;
 }
 .img {
   width: 100%;
@@ -73,10 +87,8 @@ input[type="text"]:checked {
   margin: 0 auto;
 }
 footer {
-  margin: 0 auto;
-  position: fixed;
-  left: 0;
-  bottom: 0;
+  /* margin: 20px auto 0 auto; */
+  border-top: 10px solid #eeacae;
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -90,4 +102,15 @@ footer {
   width: 3em;
   height: 3em;
   margin: 7px;
+}
+@media screen and (max-width: 900px) {
+  .content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 500px) {
+  .content {
+    grid-template-columns: repeat(1, 1fr);
+    margin: 10px 20px;
+  }
 }
