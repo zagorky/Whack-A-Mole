@@ -18,19 +18,24 @@
       <div class="player">
         <img class="poster" src="" alt="" />
         <audio src=""></audio>
-        <div class="artist"></div>
-        <div class="song"></div>
+        <div class="track-info">
+          <div class="artist"></div>
+          <div class="song"></div>
+        </div>
         <div class="controls">
           <div class="progress">
-            <p class="currentTime"></p>
             <input type="range" class="progress-filled" min="0" max="100" />
-            <p class="duration"></p>
+            <div class="time">
+              <p class="currentTime"></p>
+              <p class="duration"></p>
+            </div>
           </div>
           <div class="btn-bar">
-            <button class="btn shuffle"></button>
             <button class="btn prev"></button>
             <button class="btn play"></button>
             <button class="btn next"></button>
+          </div>
+          <div class="sound-bar">
             <button class="btn sound"></button>
             <input
               class="volume"
@@ -41,6 +46,7 @@
               value="0.5"
               step="0.1"
             />
+            <button class="btn shuffle"></button>
           </div>
         </div>
       </div>

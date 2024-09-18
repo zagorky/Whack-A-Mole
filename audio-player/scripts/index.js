@@ -53,6 +53,7 @@ function getTrack(index) {
   document.body.style.backgroundImage = `url(${song.background})`;
   player.querySelector(".poster").src = song.background;
   player.querySelector(".artist").textContent = song.artist;
+  player.querySelector(".artist").dataset.content = `       ${song.artist}`;
   player.querySelector(".song").textContent = song.song;
 }
 function nextTrack() {
