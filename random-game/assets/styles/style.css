@@ -1,8 +1,13 @@
+@font-face {
+  font-family: "SanFranciscoReg";
+  src: url("/assets/fonts/SFProText-Regular.ttf");
+}
 * {
   box-sizing: border-box;
 }
 body {
   margin: 0;
+  font-family: "SanFranciscoReg";
 }
 .wrapper {
   display: flex;
@@ -13,6 +18,27 @@ body {
   height: 100vh;
 }
 
+.alphabetContainer {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: x-large;
+  gap: 15px;
+}
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.correct {
+  font-size: 110%;
+}
+.incorrect {
+  font-size: 110%;
+  color: red;
+}
+.disable {
+  pointer-events: none;
+}
 footer {
   margin: 0 auto;
   position: absolute;

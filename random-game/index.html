@@ -3,7 +3,7 @@
   <head>
     <link
       rel="shortcut icon"
-      href="./assets/img/game_o0nu79r65gy5.ico"
+      href="./assets/img/hangman_0b3raf3noqrv.ico"
       type="image/x-icon"
     />
     <link rel="stylesheet" href="./assets/styles/reset.css" />
@@ -15,7 +15,95 @@
   </head>
   <body>
     <div class="wrapper">
-      <div class="game-container"></div>
+      <h1>Hangman</h1>
+      <div class="game-container">
+        <div class="rules">
+          <h2>Rules</h2>
+          <p>
+            One player thinks of a word and the other tries to guess it by
+            guessing letters. Each incorrect guess brings you closer to being
+            "hanged."
+          </p>
+          <p>
+            Decide who is going first. Start the game by having this person
+            choose a word or phrase in their mind.
+          </p>
+          <p>
+            Have the other player guess one letter at a time - or he or she can
+            use a turn to guess the entire word or words.
+          </p>
+          <p>
+            Circle the letter on the alphabet if is guessed correctly.Add one
+            body part to the drawing each time the letter chosen is not in the
+            word. You can make a mistake 6 times.
+          </p>
+        </div>
+        <div class="game-block">
+          <div class="wordContainer">
+            <div class="questionContainer">
+              <input
+                type="text"
+                class="questionInput"
+                id="questionInput"
+                placeholder="Take a hint"
+              />
+              <button class="askBtn" ">Submit</button>
+            </div>
+
+            <input
+              type="text"
+              class="answerInput"
+              name="answerInput"
+              id="answerInput"
+              placeholder="Add the word"
+            />
+            <button class="answerBtn">Submit</button>
+
+          </div>
+          <div class="alphabetContainer">
+            <button>A</button>
+            <button>B</button>
+            <button>C</button>
+            <button>D</button>
+            <button>E</button>
+            <button>F</button>
+            <button>G</button>
+            <button>H</button>
+            <button>I</button>
+            <button>J</button>
+            <button>K</button>
+            <button>L</button>
+            <button>M</button>
+            <button>N</button>
+            <button>O</button>
+            <button>P</button>
+            <button>Q</button>
+            <button>R</button>
+            <button>S</button>
+            <button>T</button>
+            <button>U</button>
+            <button>V</button>
+            <button>W</button>
+            <button>X</button>
+            <button>Y</button>
+            <button>Z</button>
+          </div>
+          <div class="gallowContainer">
+            <div class="gallow"></div>
+            <div class="man">
+              <div class="head"></div>
+              <div class="leftHand"></div>
+              <div class="rightHand"></div>
+              <div class="body"></div>
+              <div class="leftLeg"></div>
+              <div class="rightLeg"></div>
+            </div>
+          </div>
+          <div class="scoreList">
+            <h2>Score</h2>
+          </div>
+        </div>
+      </div>
       <footer>
         <a class="github" href="https://github.com/zagorky"
           ><svg
@@ -57,6 +145,6 @@
         ></a>
       </footer>
     </div>
-    <script type="module" src="./assets/scripts/index.js"></script>
+    <script type="module" src="/random-game/assets/scripts/index.js"></script>
   </body>
 </html>
