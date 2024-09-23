@@ -3,18 +3,44 @@ console.log(
 );
 
 const searchBox = document.querySelector(".search-box input");
-const searchBtn = document.querySelector("button[type='submit']");
-let searchingFor = "";
+const searchBtn = document.querySelector(".search");
+const skipBtn = document.querySelector(".skip");
 const content = document.querySelector(".content");
+
+let searchingFor = "";
+let isLoading = false;
+let debounce;
 
 let url = `https://api.unsplash.com/photos/random?query=&count=6&orientation=landscape&client_id=fg3V91GfUO8v970NVSOQw1IFhoi9XfHHoaTSN7sCZQE`;
 async function getData() {
-  const res = await fetch(url);
-  const data = await res.json();
-  data.forEach((el) => createImg(el));
+  if (isLoading) return;
+  isLoading = true;
+
+  try {
+    const res = await fetch(url);
+
+    if (!res.ok) {
+      throw new Error("Server Error");
+    }
+    const data = await res.json();
+    data.forEach((el) => createImg(el));
+  } catch (error) {
+    isError();
+  } finally {
+    isLoading = false;
+  }
 }
 getData();
 
+function isError() {
+  if (content.children.length === 0) {
+    content.style.display = "flex";
+    const errorDiv = document.createElement("div");
+    errorDiv.classList.add("error");
+    errorDiv.innerHTML = `<h2>Sorry, something went wrong. Visit us later</h2>`;
+    content.appendChild(errorDiv);
+  }
+}
 function createImg(data) {
   const image = document.createElement("img");
   image.classList.add("img");
@@ -22,19 +48,15 @@ function createImg(data) {
   image.alt = `${data.alt_description}`;
   content.append(image);
 }
-// function infinityScroll() {
-//   const windowHeight = window.innerHeight;
-//   const documentHeight = document.documentElement.scrollHeight;
-//   const scrollPos = window.scrollY;
-//   if (documentHeight - (windowHeight + scrollPos) >= 100) {
-//     if (searchingFor === "")
-//       url = `https://api.unsplash.com/photos/random?query=&count=3&orientation=landscape&client_id=fg3V91GfUO8v970NVSOQw1IFhoi9XfHHoaTSN7sCZQE`;
-//     getData();
-//   } else {
-//     url = `https://api.unsplash.com/photos/random?query=${searchingFor}&count=3&orientation=landscape&client_id=fg3V91GfUO8v970NVSOQw1IFhoi9XfHHoaTSN7sCZQE`;
-//     getData();
-//   }
-// }
+function infinityScroll() {
+  const documentHeight = document.documentElement.scrollHeight;
+  const scrollPos = window.scrollY + window.innerHeight;
+  if (scrollPos >= documentHeight - 100 && !isLoading) {
+    if (searchingFor === "")
+      url = `https://api.unsplash.com/photos/random?query=${searchingFor}&count=3&orientation=landscape&client_id=fg3V91GfUO8v970NVSOQw1IFhoi9XfHHoaTSN7sCZQE`;
+    getData();
+  }
+}
 function goSearching() {
   searchingFor = searchBox.value.trim().toString();
   url = `https://api.unsplash.com/photos/random?query=${searchingFor}&count=6&orientation=landscape&client_id=fg3V91GfUO8v970NVSOQw1IFhoi9XfHHoaTSN7sCZQE`;
@@ -48,32 +70,18 @@ function goClearing() {
   content.innerHTML = "";
   getData();
 }
-function isClean() {
-  if (searchBox.value !== "") {
-    searchBtn.classList.remove("search");
-    searchBtn.classList.add("clear");
-  } else if (searchBox.value === "") {
-    searchBtn.classList.add("search");
-    searchBtn.classList.remove("clear");
-  }
-}
-function changeFunctionality(event) {
-  if (searchBtn.classList.contains("search")) {
-    event.preventDefault();
-    goSearching();
-  } else {
-    event.preventDefault();
-    goClearing();
-  }
-}
 
-// document.addEventListener("scroll", infinityScroll);
+document.addEventListener("scroll", () => {
+  clearTimeout(debounce);
+  debounce = setTimeout(infinityScroll, 1000);
+});
 document.addEventListener("DOMContentLoaded", () => searchBox.focus());
-searchBtn.addEventListener("click", changeFunctionality);
-searchBox.addEventListener("input", isClean);
+searchBtn.addEventListener("click", goSearching);
+skipBtn.addEventListener("click", goClearing);
 searchBox.addEventListener("keypress", (event) => {
   if (event.key === "Enter") {
     event.preventDefault();
     goSearching();
   }
 });
+searchBox.setAttribute("autocomplete", "off");
