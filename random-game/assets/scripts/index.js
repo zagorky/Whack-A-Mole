@@ -1,45 +1,32 @@
-document.addEventListener("DOMContentLoaded", function () {});
+const holes = document.querySelectorAll(".hole");
+const scoreBoard = document.querySelector(".score");
+const moles = document.querySelectorAll(".mole");
 
-const gameConteiner = document.querySelector(".game-container");
-const questionContainer = document.querySelector(".questionContainer");
-const questionInput = document.querySelector(".questionInput");
-const answerInput = document.querySelector(".answerInput");
-const askBtn = document.querySelector(".askBtn");
-const answerBtn = document.querySelector(".answerBtn");
-const alphabetCont = document.querySelectorAll(".alphabetContainer button");
+let lastHole;
 
-const questionText = document.createElement("p");
-const answerText = document.createElement("p");
-
-let word = "";
-
-function addInfo(input, child) {
-  child.textContent = `${input.value}`;
-  questionContainer.appendChild(child);
-}
-askBtn.addEventListener("click", () => {
-  questionText.textContent = `${questionInput.value}`;
-  questionContainer.appendChild(questionText);
-});
-answerBtn.addEventListener("click", () => {
-  answerText.textContent = `${answerInput.value}`;
-  word = answerInput.value;
-  answerInput.value = "";
-  transformWord();
-});
-
-function transformWord() {
-  word = word.toUpperCase().split("");
-  console.log(word);
+function randomTime(min, max) {
+  return Math.round(Math.random() * (max - min) * min);
 }
 
-alphabetCont.forEach((button) => {
-  button.addEventListener("click", () => {
-    button.classList.add("disable");
-    if (word[button.textContent]) {
-      console.log(word[button.textContent]);
-      button.classList.add("correct");
-    }
-    button.classList.add("incorrect");
-  });
-});
+function randomHole(holes) {
+  const i = Math.floor(Math.random() * holes.length);
+  const hole = holes[i];
+  if (hole === lastHole) {
+    return randomHole(holes);
+  }
+  lastHole = hole;
+  return hole;
+}
+
+function upDown() {
+  const time = randomTime(20, 100);
+  console.log(time);
+  const hole = randomHole(holes);
+  hole.classList.add("up");
+  setTimeout(() => {
+    hole.classList.remove("up");
+    upDown();
+  }, time);
+}
+
+upDown();
