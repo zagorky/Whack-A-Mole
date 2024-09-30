@@ -1,0 +1,107 @@
+@font-face {
+  font-family: "SanFranciscoReg";
+  src: url("/random-game/assets/fonts/SFProText-Regular.ttf");
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: blanchedalmond;
+  margin: 0;
+  font-family: "SanFranciscoReg";
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 100%;
+  height: 100vh;
+}
+h1 svg {
+  width: 2em;
+  height: 2em;
+  margin: 12px;
+}
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+.score,
+.timer {
+  font-size: 1.5em;
+}
+.scoreList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.scoreItem {
+  list-style: none;
+}
+
+.game {
+  display: grid;
+  grid-template-columns: repeat(3, 25vw);
+  grid-template-rows: repeat(2, 15vh);
+}
+.start {
+  background-color: #ffcf7d;
+  font-size: 1.5em;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 400;
+  transition: font-weight 0.1s ease;
+}
+.start:hover {
+  cursor: pointer;
+  font-weight: 600;
+}
+.hole {
+  width: 100%;
+  height: 100%;
+  align-self: center;
+  justify-self: center;
+  background-size: 100% 125%;
+  background-image: url("../img/hole.svg");
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+.mole {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 80%;
+  background-size: 100% 100%;
+  background-image: url("../img/mole.svg");
+  background-repeat: no-repeat;
+  transition: all 0.2s;
+}
+.hole.up .mole {
+  top: 0;
+}
+
+footer {
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h4 {
+  -webkit-text-stroke: 0.4px black;
+}
+.github,
+.course {
+  width: 3em;
+  height: 3em;
+  margin: 12px;
+}
