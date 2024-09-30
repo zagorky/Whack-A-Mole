@@ -58,6 +58,7 @@ function startGame() {
       announceTheEnd();
     }
   }, 1000);
+  addScore(score);
 }
 
 function announceTheEnd() {
@@ -66,6 +67,7 @@ function announceTheEnd() {
 }
 function bonkSound() {
   const hitSound = document.querySelector(".hitSound");
+  hitSound.currentTime = 0;
   hitSound.play();
 }
 
