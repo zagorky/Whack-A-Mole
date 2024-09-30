@@ -70,7 +70,7 @@ function bonkSound() {
 }
 
 function bonk(event) {
-  if (!event.isTrusted) return;
+  if (!event.isTrusted || timeUp) return;
   score++;
   this.classList.remove("up");
   scoreBoard.textContent = `Score: ${score}`;
@@ -81,14 +81,15 @@ function bonk(event) {
 
 function addScore(score) {
   let scores = JSON.parse(window.localStorage.getItem("Scores")) || [];
-
   scores.push(score);
   if (scores.length > 10) {
     scores.shift();
-  } else {
-    scores.pop(scores[0]);
   }
   window.localStorage.setItem("Scores", JSON.stringify(scores));
+  console.log(
+    "Saved scores:",
+    JSON.parse(window.localStorage.getItem("Scores"))
+  );
 
   updateScoreItems(scores);
 }
