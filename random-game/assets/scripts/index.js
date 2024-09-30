@@ -66,6 +66,7 @@ function announceTheEnd() {
 }
 function bonkSound() {
   const hitSound = document.querySelector(".hitSound");
+  hitSound.currentTime = 0;
   hitSound.play();
 }
 
