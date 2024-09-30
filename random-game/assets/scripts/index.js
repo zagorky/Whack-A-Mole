@@ -58,7 +58,6 @@ function startGame() {
       announceTheEnd();
     }
   }, 1000);
-  addScore(score);
 }
 
 function announceTheEnd() {
