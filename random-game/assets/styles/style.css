@@ -1,7 +1,7 @@
 @font-face {
   font-family: "SanFranciscoReg";
-  src: url("./assets/fonts/Regular.ttf") format("truetype"),
-    url("./assets/fonts/Regular.woff") format("woff");
+  src: url("../fonts/Regular.ttf") format("truetype"),
+    url("../fonts/Regular.woff") format("woff");
 }
 * {
   box-sizing: border-box;
