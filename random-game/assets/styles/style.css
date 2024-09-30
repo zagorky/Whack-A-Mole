@@ -46,8 +46,10 @@ h1 svg {
 
 .game {
   display: grid;
-  grid-template-columns: repeat(3, 25vw);
+  max-width: 800px;
+  grid-template-columns: repeat(3, 15vw);
   grid-template-rows: repeat(2, 15vh);
+  gap: 10px;
 }
 .start {
   background-color: #ffcf7d;
