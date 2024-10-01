@@ -87,11 +87,6 @@ function addScore(score) {
     scores.shift();
   }
   window.localStorage.setItem("Scores", JSON.stringify(scores));
-  console.log(
-    "Saved scores:",
-    JSON.parse(window.localStorage.getItem("Scores"))
-  );
-
   updateScoreItems(scores);
 }
 
