@@ -8,6 +8,8 @@ A fun and interactive browser-based game where players must click on moles as th
 - **CSS3**
 - **JavaScript**
 
+![screenshort](https://github.com/zagorky/zagorky/raw/main/src/game.gif)
+
 ## Features
 
 - Randomly appearing moles with click detection.
