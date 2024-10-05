@@ -1,16 +1,20 @@
 const holes = document.querySelectorAll(".hole");
-const scoreBoard = document.querySelector(".score");
+const scoreDisplay = document.querySelector(".scoreDisplay");
 const moles = document.querySelectorAll(".mole");
 const startBtn = document.querySelector(".start");
 const scoreItem = document.querySelector(".scoreItemsList");
 const timerCont = document.querySelector(".timer");
 const scoreList = document.querySelector(".scoreList");
+const finishSound = document.querySelector(".finishSound");
+const hitSound = document.querySelector(".hitSound");
+const sounds = document.querySelector(".sounds");
 
 let lastHole;
-let timeUp = false;
+let isTimeUp = false;
 let score = 0;
 let gameTime = 10;
 let moleTimeout;
+let switchSound = true;
 let scores = JSON.parse(window.localStorage.getItem("Scores")) || [];
 
 function randomTime(min, max) {
@@ -28,53 +32,74 @@ function randomHole(holes) {
 }
 
 function upDown() {
-  const time = randomTime(200, 1000);
+  const time = randomTime(300, 1000);
   const hole = randomHole(holes);
   holes.forEach((hole) => hole.classList.remove("up"));
   hole.classList.add("up");
+
   moleTimeout = setTimeout(() => {
     hole.classList.remove("up");
-    if (!timeUp) {
+    if (!isTimeUp) {
       upDown();
     }
   }, time);
 }
 
 function startGame() {
-  scoreBoard.textContent = `Score: ${score}`;
-  timeUp = false;
+  startBtn.setAttribute("disabled", true);
+
+  scoreDisplay.textContent = `Score: ${score}`;
+  isTimeUp = false;
   score = 0;
   gameTime = 10;
   upDown();
+  timerCont.textContent = `Time: ${gameTime}`;
 
   const timer = setInterval(() => {
     gameTime--;
-    timerCont.textContent = `Time: ${gameTime}`;
+    if (gameTime > 0) {
+      timerCont.textContent = `Time: ${gameTime}`;
+    }
     if (gameTime === 0) {
       clearInterval(timer);
-      timeUp = true;
+      timerCont.textContent = "Time's up!";
+      isTimeUp = true;
+      startBtn.removeAttribute("disabled", true);
       addScore(score);
-    } else if (gameTime === 1) {
       announceTheEnd();
+      alert(`Your score is ${score}`);
     }
   }, 1000);
 }
 
+function muteSounds() {
+  if (switchSound) {
+    sounds.classList.add("off");
+    sounds;
+    hitSound.muted = true;
+    finishSound.muted = true;
+    switchSound = false;
+  } else {
+    sounds.classList.remove("off");
+    hitSound.muted = false;
+    finishSound.muted = false;
+    switchSound = true;
+  }
+}
+
 function announceTheEnd() {
-  const finishSound = document.querySelector(".finishSound");
   finishSound.play();
 }
 function bonkSound() {
-  const hitSound = document.querySelector(".hitSound");
   hitSound.currentTime = 0;
   hitSound.play();
 }
 
 function bonk(event) {
-  if (!event.isTrusted || timeUp) return;
+  if (!event.isTrusted || isTimeUp) return;
   score++;
   this.classList.remove("up");
-  scoreBoard.textContent = `Score: ${score}`;
+  scoreDisplay.textContent = `Score: ${score}`;
   clearTimeout(moleTimeout);
   bonkSound();
   upDown();
@@ -82,9 +107,9 @@ function bonk(event) {
 
 function addScore(score) {
   let scores = JSON.parse(window.localStorage.getItem("Scores")) || [];
-  scores.push(score);
+  scores.unshift(score);
   if (scores.length > 10) {
-    scores.shift();
+    scores.pop();
   }
   window.localStorage.setItem("Scores", JSON.stringify(scores));
   updateScoreItems(scores);
@@ -107,3 +132,4 @@ loadScores();
 
 moles.forEach((mole) => mole.addEventListener("click", bonk));
 startBtn.addEventListener("click", startGame);
+sounds.addEventListener("click", muteSounds);

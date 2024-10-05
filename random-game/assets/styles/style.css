@@ -73,13 +73,29 @@ h3 {
   grid-template-rows: repeat(2, 15vh);
   gap: 10px;
 }
+.sounds {
+  width: 3em;
+  height: 2.95em;
+  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+  background-color: #ffcf7d;
+  background-image: url("../img/soundsOn.svg");
+  background-size: 70% 70%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.off {
+  background-image: url("../img/mute.svg");
+}
 .start {
   background-color: #ffcf7d;
   font-size: 1.5em;
   padding: 10px;
   border-radius: 10px;
   border: none;
-  font-weight: 400;
+  /* font-weight: 400; */
   transition: font-weight 0.1s ease;
 }
 .start:hover {
@@ -96,6 +112,7 @@ h3 {
   background-repeat: no-repeat;
   position: relative;
   overflow: hidden;
+  cursor: url("../img/hammer.svg"), auto;
 }
 .mole {
   position: absolute;
