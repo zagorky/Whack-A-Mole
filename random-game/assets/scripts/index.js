@@ -56,7 +56,7 @@ function clearScore() {
   level = 1;
   minTimeToShowMole = 600;
   maxTimeToShowMole = 1000;
-  levelDisplay.textContent = `Level: ${level}`;
+  levelDisplay.textContent = `Level: ${level} of ${maxLevel}`;
 }
 function clearModal() {
   modal.innerHTML = "";
@@ -84,7 +84,7 @@ function changeDurationShowMole() {
 }
 function changeLevelDisplay() {
   level++;
-  levelDisplay.textContent = `Level: ${level}`;
+  levelDisplay.textContent = `Level: ${level} of ${maxLevel}`;
 }
 function changeLevel() {
   if (level === maxLevel) {
@@ -109,6 +109,8 @@ function showMole() {
   hole.classList.add("up");
 
   moleTimeout = setTimeout(() => {
+    hitSound.pause();
+    hitSound.currentTime = 0;
     hole.classList.remove("up");
     if (!isTimeUp) {
       showMole();
