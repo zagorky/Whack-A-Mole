@@ -22,7 +22,8 @@ let score = 0;
 let gameDuration = 10; // 10sec
 let moleTimeout;
 let switchSound = true;
-let scores = JSON.parse(window.localStorage.getItem("Scores")) || [];
+let scores =
+  JSON.parse(window.localStorage.getItem("Scores in Whack-A-Mole")) || [];
 let minTimeToShowMole = 600; // 600ms
 let maxTimeToShowMole = 1000; // 1000ms
 let level = 1;
@@ -99,7 +100,9 @@ function changeLevel() {
   }
   changeDurationShowMole();
   changeLevelDisplay();
-  createModal(`Next level ${level}! Now you should be faster!`);
+  createModal(
+    `Next level ${level}! Now you should be faster! Press start to continue!`
+  );
 }
 function showMole() {
   if (isTimeUp) return;
@@ -183,7 +186,7 @@ function addScore(score) {
   if (scores.length > 10) {
     scores.pop();
   }
-  window.localStorage.setItem("Scores", JSON.stringify(scores));
+  window.localStorage.setItem("Scores in Whack-A-Mole", JSON.stringify(scores));
   updateScoreItems(scores);
 }
 function updateScoreItems(scores) {
@@ -196,14 +199,14 @@ function updateScoreItems(scores) {
     scoreList.appendChild(li);
   });
 }
-function loadScores() {
+function loadData() {
   updateScoreItems(scores);
   hitSound.load();
   finishSound.load();
   specialPrizeVideo.load();
 }
 
-loadScores();
+loadData();
 
 moles.forEach((mole) => mole.addEventListener("click", bonk));
 startBtn.addEventListener("click", startGame);
@@ -213,4 +216,7 @@ closeModalBtn.addEventListener("click", () => {
   finishSound.pause();
   finishSound.currentTime = 0;
   startBtn.removeAttribute("disabled", true);
+});
+document.addEventListener("dragstart", function (event) {
+  event.preventDefault();
 });
