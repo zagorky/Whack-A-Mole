@@ -19,7 +19,7 @@ A fun and interactive browser-based game where players must click on moles as th
 
 ## Deployment
 
-[Live Demo](https://zagorky.github.io/Whack-A-Mole/whack-a-mole)
+[Live Demo](https://zagorky.github.io/Whack-A-Mole/random-game)
 
 ## Local Setup
 
